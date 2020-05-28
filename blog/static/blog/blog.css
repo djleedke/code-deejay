@@ -5,33 +5,59 @@
     display:flex;
     background-color:white;
     margin-bottom:20px;
+    align-items: center;
 }
 .logo {
-    padding:10px;
-    font-size: 2em;
+    padding-left:20px;
+    height:100%;
 }
+
 nav ul {
     display:flex;
-    margin:0 0 0 30px;
+    margin:0;
+    height:100%;
 }
 nav li {
     list-style-type: none;
     margin:0px;
-    padding:20px;
+    padding:10px 20px 10px 20px;
+    font-size:20px;
+    font-weight: bold;
+    border-bottom:5px solid transparent;
 }
 
-/*---------- Body ----------*/
-
-body {
-    background: rgb(249,250,250);
-    background: linear-gradient(330deg, rgba(249,250,250,1) 0%, rgba(204,159,92,1) 25%, rgba(137,139,134,1) 49%, rgba(92,88,88,1) 78%, rgba(56,64,64,1) 100%);
+nav li:hover {
+    border-bottom: 5px solid black;
 }
+
+/*---------- Entry Cards ----------*/
 
 .entry-card{
     background-color:white;
     border-radius:5px;
-    min-height: 500px;
+    min-height: 0px;
     margin: auto;
     margin-bottom: 20px;
     width:80%;
+    position:relative;
+}
+
+.entry-title {
+    padding: 20px 0 20px 40px;
+    font-size:34px;
+}
+
+.entry-description {
+    padding: 0 40px 20px 40px;
+}
+
+.entry-card hr {
+    margin:0px;
+}
+
+.entry-footer {
+    padding: 20px 0 20px 40px;
+    bottom:0;
+    font-style: italic;
+    color:rgb(145, 145, 145);
 }

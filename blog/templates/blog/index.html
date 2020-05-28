@@ -22,24 +22,47 @@
     }
 </style>
     <header class="main-header">
-        <div class="logo">CodeDeejay</div>
-        <nav>
-            <ul>
-                <li>About Me</li>
-                <li>Blog</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+        <!--<div class="logo">CodeDeejay</div>-->
+        <img class="logo" src="{% static 'blog/logo-small.png' %}">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>About Me</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div class="container">
         <div class="row">
             <div class="entry-card">
-                <h2>Entry 1</h2>
+                <h1 class="entry-title">Entry 1</h1>
+                <p class="entry-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id vehicula ex. Mauris id aliquet lorem. 
+                    Cras id risus ut sapien fermentum scelerisque eget ac nisi. In ut dolor quam. Maecenas id mauris faucibus, 
+                    condimentum elit vitae, molestie lorem. Phasellus tempor nisl dignissim leo maximus, a dictum mi consectetur. 
+                    Nullam vel nisl mattis, interdum enim non, elementum urna. Cras laoreet pulvinar tempor. Curabitur scelerisque 
+                    tortor et diam auctor, eget congue ante egestas. Nam vestibulum facilisis lorem vitae aliquam. Interdum et malesuada 
+                    fames ac ante ipsum primis in faucibus.
+                </p>
+                <hr>
+                <div class="entry-footer">Posted by: Doug Leedke</div>
             </div>
         </div>
         <div class="row">
             <div class="entry-card">
-                <h2>Entry 2</h2>
+                <h1 class="entry-title">Entry 2</h1>
+                <p class="entry-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id vehicula ex. Mauris id aliquet lorem. 
+                    Cras id risus ut sapien fermentum scelerisque eget ac nisi. In ut dolor quam. Maecenas id mauris faucibus, 
+                    condimentum elit vitae, molestie lorem. Phasellus tempor nisl dignissim leo maximus, a dictum mi consectetur. 
+                    Nullam vel nisl mattis, interdum enim non, elementum urna. Cras laoreet pulvinar tempor. Curabitur scelerisque 
+                    tortor et diam auctor, eget congue ante egestas. Nam vestibulum facilisis lorem vitae aliquam. Interdum et malesuada 
+                    fames ac ante ipsum primis in faucibus.
+                </p>
+                <hr>
+                <div class="entry-footer">Posted by: Doug Leedke</div>
             </div>
         </div>
     </div>
