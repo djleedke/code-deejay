@@ -1,0 +1,37 @@
+
+
+/* ---------- Navbar ---------- */
+.main-header{
+    display:flex;
+    background-color:white;
+    margin-bottom:20px;
+}
+.logo {
+    padding:10px;
+    font-size: 2em;
+}
+nav ul {
+    display:flex;
+    margin:0 0 0 30px;
+}
+nav li {
+    list-style-type: none;
+    margin:0px;
+    padding:20px;
+}
+
+/*---------- Body ----------*/
+
+body {
+    background: rgb(249,250,250);
+    background: linear-gradient(330deg, rgba(249,250,250,1) 0%, rgba(204,159,92,1) 25%, rgba(137,139,134,1) 49%, rgba(92,88,88,1) 78%, rgba(56,64,64,1) 100%);
+}
+
+.entry-card{
+    background-color:white;
+    border-radius:5px;
+    min-height: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    width:80%;
+}

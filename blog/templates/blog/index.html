@@ -1,1 +1,48 @@
-<h1>Template!</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CodeDeejay</title>
+    <meta name="description" content="Starter Template">
+    {% load static %}
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'blog/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/skeleton.css' %}">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
+</head>
+<body>
+<style>
+    /* Inline styling not ideal but necessary to load static background image w/ Django */
+    body {
+        background-image: url("{% static 'blog/triangles.png' %}");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+    }
+</style>
+    <header class="main-header">
+        <div class="logo">CodeDeejay</div>
+        <nav>
+            <ul>
+                <li>About Me</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="entry-card">
+                <h2>Entry 1</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="entry-card">
+                <h2>Entry 2</h2>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
