@@ -23,49 +23,75 @@
 </style>
     <header class="main-header">
         <!--<div class="logo">CodeDeejay</div>-->
-        <img class="logo" src="{% static 'blog/logo-small.png' %}">
+        <a href="#"><img class="logo" src="{% static 'blog/logo-small.png' %}"></a>
         <div class="container">
             <nav>
                 <ul>
-                    <li>About Me</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container">
         <div class="row">
+            <a name="about"></a>
+            <div class="entry-card" id="about-me">
+                <h1 class="entry-title" id="about-me-title">About Me</h1>
+                <div id="about-me-content">
+                    <div id="about-me-photo">
+                        <img id="user-image" src="{% static 'blog/me.png' %}">
+                        <span id="about-me-name">D.J. Leedke</span>
+                        <span id="about-me-city">Minneapolis, MN</span>
+                    </div>
+                    <p class="entry-description">
+                        Greetings!  My name is <b>D.J. Leedke</b>, and I am an aspiring software developer working hard to break into the industry.  This website is a collection of my completed projects for curious
+                        minds to peruse (as well as a project itself), so feel free to have a look around.  My current language of choice is Python though I have dabbled in many, and I am currently working to add more projects to this list.
+                        If you have any questions about a project or would just like to chat, feel free to send me an email using the <a href="#contact">form</a> below.  Also please head on over and check out my 
+                        <a href="https://github.com/dougleedke" target="_blank">Github</a> if you would like to check out the code!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a name="projects"></a>
             <div class="entry-card">
-                <h1 class="entry-title">Entry 1</h1>
+                <h1 class="entry-title">Project: CodeDeejay.com</h1>
                 <p class="entry-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id vehicula ex. Mauris id aliquet lorem. 
-                    Cras id risus ut sapien fermentum scelerisque eget ac nisi. In ut dolor quam. Maecenas id mauris faucibus, 
-                    condimentum elit vitae, molestie lorem. Phasellus tempor nisl dignissim leo maximus, a dictum mi consectetur. 
-                    Nullam vel nisl mattis, interdum enim non, elementum urna. Cras laoreet pulvinar tempor. Curabitur scelerisque 
-                    tortor et diam auctor, eget congue ante egestas. Nam vestibulum facilisis lorem vitae aliquam. Interdum et malesuada 
-                    fames ac ante ipsum primis in faucibus.
+                    This website was created using the Django framework.  
                 </p>
                 <hr>
-                <div class="entry-footer">Posted by: Doug Leedke</div>
+                <div class="entry-footer">Posted by: D.J. Leedke</div>
             </div>
         </div>
         <div class="row">
             <div class="entry-card">
-                <h1 class="entry-title">Entry 2</h1>
+                <h1 class="entry-title">Project: News App</h1>
                 <p class="entry-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id vehicula ex. Mauris id aliquet lorem. 
-                    Cras id risus ut sapien fermentum scelerisque eget ac nisi. In ut dolor quam. Maecenas id mauris faucibus, 
-                    condimentum elit vitae, molestie lorem. Phasellus tempor nisl dignissim leo maximus, a dictum mi consectetur. 
-                    Nullam vel nisl mattis, interdum enim non, elementum urna. Cras laoreet pulvinar tempor. Curabitur scelerisque 
-                    tortor et diam auctor, eget congue ante egestas. Nam vestibulum facilisis lorem vitae aliquam. Interdum et malesuada 
-                    fames ac ante ipsum primis in faucibus.
+                    News App is a project created using the Flask framework.
                 </p>
                 <hr>
-                <div class="entry-footer">Posted by: Doug Leedke</div>
+                <div class="entry-footer">Posted by: D.J. Leedke</div>
+            </div>
+        </div>
+        <div class="row">
+            <a name="contact"></a>
+            <div class="entry-card contact-card">
+                <h1 class="entry-title">Contact</h1>
+                <div id="contact-form">
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" autocomplete="off" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="email" autocomplete="off" id="email" name="email">
+                        <label for="message" id="message" name="message">Message:</label>
+                        <textarea name="message"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <script src="js/scripts.js"></script>
 </body>
 </html>

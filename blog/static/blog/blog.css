@@ -26,6 +26,11 @@ nav li {
     border-bottom:5px solid transparent;
 }
 
+nav a {
+    text-decoration: none;
+    color:black;
+}
+
 nav li:hover {
     border-bottom: 5px solid black;
 }
@@ -40,10 +45,11 @@ nav li:hover {
     margin-bottom: 20px;
     width:80%;
     position:relative;
+    
 }
 
 .entry-title {
-    padding: 20px 0 20px 40px;
+    padding: 20px 40px 20px 40px;
     font-size:34px;
 }
 
@@ -60,4 +66,86 @@ nav li:hover {
     bottom:0;
     font-style: italic;
     color:rgb(145, 145, 145);
+}
+
+/*---------- About Me ----------*/
+
+#about-me .entry-title {
+    margin:0px;
+}
+
+#about-me {
+    padding-bottom:20px;
+}
+
+#about-me-content{
+    display:flex;
+}
+
+#about-me-photo {
+    margin-left:40px;
+}
+
+#about-me-name {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    width:100%;
+}
+
+#about-me-city {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    width:100%;
+}
+
+
+
+/*---------- Contact Card ----------*/
+
+.contact-card .entry-title {
+    margin:0px;
+}
+
+#contact-form {
+    padding: 0 40px 0 40px;
+}
+
+#contact-form textarea {
+    width:100%;
+    height:200px;
+    margin-right:40px;
+    resize:none;
+}
+
+/*---------- Media Queries ----------*/
+@media only screen and (max-width: 800px){
+    
+    .main-header{
+        display: block;
+        text-align: center;
+    }
+    
+    nav li {
+        width:100%;
+    }
+ 
+    .entry-card {
+        width:100%;
+    }
+
+    #about-me-title {
+        text-align: center;
+    }
+
+    #about-me-content {
+        display:block;
+    }
+
+    #about-me-photo {
+        text-align: center;
+        padding-bottom:20px;
+        padding-right:40px;
+    }
 }
