@@ -1,97 +1,64 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>CodeDeejay</title>
-    <meta name="description" content="Starter Template">
-    {% load static %}
-    <!-- External CSS -->
-    <link rel="stylesheet" href="{% static 'blog/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/skeleton.css' %}">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
-</head>
-<body>
-<style>
-    /* Inline styling not ideal but necessary to load static background image w/ Django */
-    body {
-        background-image: url("{% static 'blog/triangles.png' %}");
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-attachment: fixed;
-    }
-</style>
-    <header class="main-header">
-        <!--<div class="logo">CodeDeejay</div>-->
-        <a href="#"><img class="logo" src="{% static 'blog/logo-small.png' %}"></a>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-        <div class="row">
-            <a name="about"></a>
-            <div class="entry-card" id="about-me">
-                <h1 class="entry-title" id="about-me-title">About Me</h1>
-                <div id="about-me-content">
-                    <div id="about-me-photo">
-                        <img id="user-image" src="{% static 'blog/me.png' %}">
-                        <span id="about-me-name">D.J. Leedke</span>
-                        <span id="about-me-city">Minneapolis, MN</span>
-                    </div>
-                    <p class="entry-description">
-                        Greetings!  My name is <b>D.J. Leedke</b>, and I am an aspiring software developer working hard to break into the industry.  This website is a collection of my completed projects for curious
-                        minds to peruse (as well as a project itself), so feel free to have a look around.  My current language of choice is Python though I have dabbled in many, and I am currently working to add more projects to this list.
-                        If you have any questions about a project or would just like to chat, feel free to send me an email using the <a href="#contact">form</a> below.  Also please head on over and check out my 
-                        <a href="https://github.com/dougleedke" target="_blank">Github</a> if you would like to check out the code!
-                    </p>
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <a name="about"></a>
+        <div class="entry-card" id="about-me">
+            <h1 class="entry-title" id="about-me-title">About Me</h1>
+            <div id="about-me-content">
+                <div id="about-me-photo">
+
+                    <img id="user-image" src="{% static 'blog/me.png' %}">
+                    <span id="about-me-name">D.J. Leedke</span>
+                    <span id="about-me-city"><a href="https://www.google.com/maps/place/Minneapolis,+MN/" target="_blank">Minneapolis, MN</a></span>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <a name="projects"></a>
-            <div class="entry-card">
-                <h1 class="entry-title">Project: CodeDeejay.com</h1>
                 <p class="entry-description">
-                    This website was created using the Django framework.  
+                    Greetings!  My name is <b>D.J. Leedke</b>, and I am an aspiring software developer working hard to break into the industry.  This website is a collection of my completed projects for curious
+                    minds to peruse (as well as a project in itself), so feel free to have a look around.  My current language of choice is Python though I have dabbled in many, and I am currently working to add more projects to this list.
+                    If you have any questions about a project or would just like to chat, feel free to send me an email using the <a href="#contact">form</a> below.  Also please head on over and check out my 
+                    <a href="https://github.com/dougleedke" target="_blank">Github</a> if you would like to check out the code!
                 </p>
-                <hr>
-                <div class="entry-footer">Posted by: D.J. Leedke</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="entry-card">
-                <h1 class="entry-title">Project: News App</h1>
-                <p class="entry-description">
-                    News App is a project created using the Flask framework.
-                </p>
-                <hr>
-                <div class="entry-footer">Posted by: D.J. Leedke</div>
-            </div>
-        </div>
-        <div class="row">
-            <a name="contact"></a>
-            <div class="entry-card contact-card">
-                <h1 class="entry-title">Contact</h1>
-                <div id="contact-form">
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" autocomplete="off" id="name" name="name">
-                        <label for="email">Email:</label>
-                        <input type="email" autocomplete="off" id="email" name="email">
-                        <label for="message" id="message" name="message">Message:</label>
-                        <textarea name="message"></textarea>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+    <div class="row">
+        <a name="projects"></a>
+        <div class="entry-card">
+            <h1 class="entry-title">Project: CodeDeejay.com</h1>
+            <p class="entry-description">
+                This website was created using the Django framework.  
+            </p>
+            <hr>
+            <div class="entry-footer">Posted by: D.J. Leedke</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="entry-card">
+            <h1 class="entry-title">Project: News App</h1>
+            <p class="entry-description">
+                News App is a project created using the Flask framework.
+            </p>
+            <hr>
+            <div class="entry-footer">Posted by: D.J. Leedke</div>
+        </div>
+    </div>
+    <div class="row">
+        <a name="contact"></a>
+        <div class="entry-card contact-card">
+            <h1 class="entry-title">Contact</h1>
+            <div id="contact-form">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" autocomplete="off" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" autocomplete="off" id="email" name="email">
+                    <label for="message" id="message" name="message">Message:</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
