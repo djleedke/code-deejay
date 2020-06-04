@@ -1,14 +1,12 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
+    <a name="about"></a>
     <div class="row">
-        <a name="about"></a>
         <div class="entry-card" id="about-me">
             <h1 class="entry-title" id="about-me-title">About Me</h1>
             <div id="about-me-content">
                 <div id="about-me-photo">
-
                     <img id="user-image" src="{% static 'blog/me.png' %}">
                     <span id="about-me-name">D.J. Leedke</span>
                     <span id="about-me-city"><a href="https://www.google.com/maps/place/Minneapolis,+MN/" target="_blank">Minneapolis, MN</a></span>
@@ -22,29 +20,21 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <a name="projects"></a>
-        <div class="entry-card">
-            <h1 class="entry-title">Project: CodeDeejay.com</h1>
-            <p class="entry-description">
-                This website was created using the Django framework.  
-            </p>
-            <hr>
-            <div class="entry-footer">Posted by: D.J. Leedke</div>
+    <a name="posts"></a>
+    {% for post in posts %}
+        <div class="row">
+            <div class="entry-card">
+                <h1 class="entry-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
+                <div class="entry-description">
+                    {{post.description | safe}}  
+                </div>
+                <hr>
+                <div class="entry-footer">Posted by: {{post.author.first_name}} {{post.author.last_name}}</div>
+            </div>
         </div>
-    </div>
+    {% endfor %}
+    <a name="contact"></a>
     <div class="row">
-        <div class="entry-card">
-            <h1 class="entry-title">Project: News App</h1>
-            <p class="entry-description">
-                News App is a project created using the Flask framework.
-            </p>
-            <hr>
-            <div class="entry-footer">Posted by: D.J. Leedke</div>
-        </div>
-    </div>
-    <div class="row">
-        <a name="contact"></a>
         <div class="entry-card contact-card">
             <h1 class="entry-title">Contact</h1>
             <div id="contact-form">
@@ -60,5 +50,4 @@
             </div>
         </div>
     </div>
-</div>
 {% endblock %}

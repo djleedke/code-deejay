@@ -49,11 +49,20 @@ nav li:hover {
 }
 
 .entry-title {
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px 10px 40px;
     font-size:34px;
 }
 
+.entry-title a {
+    text-decoration: none;
+    color:inherit;
+}
+
 .entry-description {
+    padding: 0 40px 20px 40px;
+}
+
+.entry-content {
     padding: 0 40px 20px 40px;
 }
 
