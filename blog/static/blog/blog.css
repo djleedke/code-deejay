@@ -50,6 +50,7 @@ nav li:hover {
 
 .entry-title {
     padding: 20px 40px 10px 40px;
+    margin-bottom:10px;
     font-size:34px;
 }
 
@@ -129,8 +130,9 @@ nav li:hover {
 }
 
 /*---------- Media Queries ----------*/
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px){
     
+
     .main-header{
         display: block;
         text-align: center;
@@ -142,6 +144,24 @@ nav li:hover {
  
     .entry-card {
         width:100%;
+    }
+
+    .entry-title {
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .entry-description {
+        padding:0px 20px 20px 20px;
+    }
+
+    .entry-content {
+        padding:0px 20px 20px 20px;
+    }
+
+    .entry-footer {
+        padding-left:20px;
+        padding-right:20px;
     }
 
     #about-me-title {
@@ -156,5 +176,10 @@ nav li:hover {
         text-align: center;
         padding-bottom:20px;
         padding-right:40px;
+    }
+
+    #contact-form {
+        padding-left:20px;
+        padding-right:20px;
     }
 }
