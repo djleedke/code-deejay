@@ -71,7 +71,7 @@ nav li:hover {
 }
 
 .entry-description p {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .entry-content {
@@ -101,11 +101,9 @@ nav li:hover {
 
 #about-me img {
     width:100px;
-}
-
-#about-me img {
     border-radius: 50%;
 }
+
 
 #about-me-content{
     display:flex;
@@ -125,7 +123,7 @@ nav li:hover {
 #about-me-city {
     display: inline-block;
     text-align: center;
-    font-size: .75em;
+    font-size: .7em;
     width:100%;
 }
 

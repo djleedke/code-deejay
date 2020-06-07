@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io
 
+#My files
+config.py
+
 ### OSX ###
 .DS_Store
 .AppleDouble
