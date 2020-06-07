@@ -1,5 +1,8 @@
 
-
+body {
+    font-size:1.75em;
+    line-height: 1.75em;
+}
 /* ---------- Navbar ---------- */
 .main-header{
     display:flex;
@@ -48,6 +51,10 @@ nav li:hover {
     
 }
 
+.entry-card img {
+    width:100%;
+}
+
 .entry-title {
     padding: 20px 40px 10px 40px;
     margin-bottom:10px;
@@ -61,6 +68,10 @@ nav li:hover {
 
 .entry-description {
     padding: 0 40px 20px 40px;
+}
+
+.entry-description p {
+    margin-bottom: 0px;
 }
 
 .entry-content {
@@ -88,6 +99,14 @@ nav li:hover {
     padding-bottom:20px;
 }
 
+#about-me img {
+    width:100px;
+}
+
+#about-me img {
+    border-radius: 50%;
+}
+
 #about-me-content{
     display:flex;
 }
@@ -99,14 +118,14 @@ nav li:hover {
 #about-me-name {
     display: inline-block;
     text-align: center;
-    font-size: 12px;
+    font-size: .9em;
     width:100%;
 }
 
 #about-me-city {
     display: inline-block;
     text-align: center;
-    font-size: 12px;
+    font-size: .75em;
     width:100%;
 }
 
@@ -181,5 +200,11 @@ nav li:hover {
     #contact-form {
         padding-left:20px;
         padding-right:20px;
+    }
+}
+
+@media (min-width: 400px){
+    .container {
+        width: 90%;
     }
 }
