@@ -6,13 +6,36 @@ body {
     background: rgb(45,88,84);
 }
 
+/* ---------- Miscellaneous ---------- */
+
+/* Stick Navbar */
+.anchor {
+    display:block;
+    position:relative;
+    top: -60px;
+    visibility: hidden;
+}
+
 /* ---------- Navbar ---------- */
 .main-header{
     display:flex;
     background-color:white;
     margin-bottom:20px;
     align-items: center;
+
+    /* Stick Navbar */
+    z-index:10;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
+/* Sticky Navbar */
+#content {
+    margin-top:75px;
+}
+
 .logo {
     padding-left:20px;
     height:100%;
@@ -45,6 +68,63 @@ nav li:hover {
     border-bottom: 5px solid black;
     
 }
+
+
+/*---------- Navbar Overlay ---------- */
+
+#overlay-toggle {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 20px 0 20px 0;
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    min-width:200px;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
 
 /*---------- Entry Cards ----------*/
 
@@ -106,8 +186,8 @@ nav li:hover {
 .project-card {
     background-color:white;
     border-radius:5px;
-    margin:10px;
-    padding:10px;
+    margin-bottom:40px;
+    padding:5px;
 
 }
 
@@ -179,14 +259,28 @@ nav li:hover {
     
     /*---------- Navbar ----------*/
     .main-header{
-        display: block;
+        display: flex;
         text-align: center;
     }
     
     nav li {
         width:100%;
     }
- 
+
+    .main-header nav {
+        float:right;
+        padding-right:30px;
+    }
+
+    .main-header nav ul {
+        display:none;
+    }
+
+    #overlay-toggle {
+        display: inline;
+        font-size:40px;
+        cursor:pointer;
+    }
 
     /*---------- Entry Cards ----------*/
     .entry-card {

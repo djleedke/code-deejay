@@ -12,6 +12,16 @@
         <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
     </head>
     <body>
+        <!-- Overlay-->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a href="/#about" onclick="toggleNav()">About Me</a>
+              <a href="/#posts" onclick="toggleNav()">Blog</a>
+              <a href="/projects">Projects</a>
+              <a href="/#contact"  onclick="toggleNav()">Contact</a>
+            </div>
+        </div>
+        <!-- Navbar -->
         <header class="main-header">
             <a href="/"><img class="logo" src="{% static 'blog/logo-small.png' %}"></a>
             <div class="container">
@@ -22,6 +32,7 @@
                         <li><a href="/projects">Projects</a></li>
                         <li><a href="/#contact">Contact</a></li>
                     </ul>
+                    <span id="overlay-toggle" onclick="toggleNav()">&#9776;</span>
                 </nav>
             </div>
         </header>
@@ -33,12 +44,13 @@
                 background-size:cover;
                 background-attachment: fixed;
             }*/
-           
         </style>
-        <!-- Page content here -->
-        <div class="container">
+        <!-- Page Content -->
+        <div id="content" class="container">
             {% block content %}{% endblock %}
         </div>
+        <!-- My JS -->
+        <script src="{% static 'blog/blog.js' %}"></script>
     </body>
 </html>
 
