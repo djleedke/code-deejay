@@ -13,13 +13,13 @@
     </head>
     <body>
         <header class="main-header">
-            <!--<div class="logo">CodeDeejay</div>-->
             <a href="/"><img class="logo" src="{% static 'blog/logo-small.png' %}"></a>
             <div class="container">
                 <nav>
                     <ul>
                         <li><a href="/#about">About Me</a></li>
-                        <li><a href="/#posts">Projects</a></li>
+                        <li><a href="/#posts">Blog</a></li>
+                        <li><a href="/projects">Projects</a></li>
                         <li><a href="/#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -27,17 +27,13 @@
         </header>
         <style>
             /* Inline styling not ideal but necessary to load static background image w/ Django */
-            body {
+            /*body {
                 background-image: url("{% static 'blog/triangles.png' %}");
                 background-repeat:no-repeat;
                 background-size:cover;
                 background-attachment: fixed;
-            }
-            /*
-            body {
-                background-color:#333333;
-            }
-            */
+            }*/
+           
         </style>
         <!-- Page content here -->
         <div class="container">

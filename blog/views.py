@@ -4,7 +4,8 @@ from django.core.mail import send_mail
 from .models import Post
 from .config import *
 
-#Main index page
+#---------- Main Page ----------
+#Main page w/ about me, blog, and contact form
 def index(request):
 
     posts = Post.objects.all()
@@ -14,7 +15,8 @@ def index(request):
     
     return render(request, 'blog/index.html', context)
 
-#Post detail page w/ the full blog post
+#---------- Post Detail Page ---------- 
+#Displays details of blog post
 def post_detail(request, slug):
 
     post = Post.objects.get(slug=slug)
@@ -24,7 +26,14 @@ def post_detail(request, slug):
 
     return render(request, 'blog/post_detail.html', context)
 
-#Submitting our contact form leads here and sends an email with the info
+#---------- Projects Page ----------
+#Page showcasing all projects, big & small
+def projects(request):
+
+    return render(request, 'blog/projects.html')
+
+#---------- Contact Form ----------
+#Sends contact form information to email address
 def contact(request):
 
     if request.method == 'POST':

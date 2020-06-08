@@ -1,8 +1,11 @@
 
+
 body {
     font-size:1.75em;
     line-height: 1.75em;
+    background: rgb(45,88,84);
 }
+
 /* ---------- Navbar ---------- */
 .main-header{
     display:flex;
@@ -34,8 +37,13 @@ nav a {
     color:black;
 }
 
+nav a:hover{
+    color:black;
+}
+
 nav li:hover {
     border-bottom: 5px solid black;
+    
 }
 
 /*---------- Entry Cards ----------*/
@@ -89,6 +97,29 @@ nav li:hover {
     color:rgb(145, 145, 145);
 }
 
+/*---------- Project Card ----------*/
+
+#projects {
+    height:100%;
+}
+
+.project-card {
+    background-color:white;
+    border-radius:5px;
+    margin:10px;
+    padding:10px;
+
+}
+
+.project-card-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.project-card img {
+    width: 100%;
+}
+
 /*---------- About Me ----------*/
 
 #about-me .entry-title {
@@ -103,7 +134,6 @@ nav li:hover {
     width:100px;
     border-radius: 50%;
 }
-
 
 #about-me-content{
     display:flex;
@@ -127,8 +157,6 @@ nav li:hover {
     width:100%;
 }
 
-
-
 /*---------- Contact Card ----------*/
 
 .contact-card .entry-title {
@@ -149,7 +177,7 @@ nav li:hover {
 /*---------- Media Queries ----------*/
 @media only screen and (max-width: 600px){
     
-
+    /*---------- Navbar ----------*/
     .main-header{
         display: block;
         text-align: center;
@@ -159,6 +187,8 @@ nav li:hover {
         width:100%;
     }
  
+
+    /*---------- Entry Cards ----------*/
     .entry-card {
         width:100%;
     }
@@ -181,6 +211,7 @@ nav li:hover {
         padding-right:20px;
     }
 
+    /*---------- About Me ----------*/
     #about-me-title {
         text-align: center;
     }
@@ -194,6 +225,8 @@ nav li:hover {
         padding-bottom:20px;
         padding-right:40px;
     }
+
+    /*---------- Contact Form ----------*/
 
     #contact-form {
         padding-left:20px;
