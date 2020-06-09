@@ -18,3 +18,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Project(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(default='')
+    github_url = models.URLField(default='')
+    project_url = models.URLField(default='')
+    image = models.ImageField(blank=True, null=True, upload_to="projects/")
+
+    def __str__(self):
+        return self.title
