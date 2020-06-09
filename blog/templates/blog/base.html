@@ -1,41 +1,19 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>CodeDeejay</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, , maximum-scale=1.0, user-scalable=no">
-        {% load static %}
         <!-- External CSS -->
         <link rel="stylesheet" href="{% static 'blog/normalize.css' %}">
         <link rel="stylesheet" href="{% static 'blog/skeleton.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Karla:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
         <!-- My CSS -->
         <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
     </head>
     <body>
-        <!-- Mobile Overlay-->
-        <div id="overlay">
-            <div id="overlay-content">
-              <a href="/#about" onclick="toggleNav()">About Me</a>
-              <a href="/#posts" onclick="toggleNav()">Blog</a>
-              <a href="/projects">Projects</a>
-              <a href="/#contact"  onclick="toggleNav()">Contact</a>
-            </div>
-        </div>
-        <!-- Navbar -->
-        <header class="main-header">
-            <a href="/"><img class="logo" src="{% static 'blog/logo-white.png' %}"></a>
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li><a href="/#about">About Me</a></li>
-                        <li><a href="/#posts">Blog</a></li>
-                        <li><a href="/projects">Projects</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                    <span id="overlay-toggle" onclick="toggleNav()">&#9776;</span>
-                </nav>
-            </div>
-        </header>
+        {% include "blog/navbar.html" %}
         <!-- Page Content -->
         <div id="content" class="container">
             {% block content %}{% endblock %}

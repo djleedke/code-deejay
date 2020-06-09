@@ -1,0 +1,25 @@
+{% load static %}
+<!-- Mobile Overlay-->
+<div id="overlay">
+    <div id="overlay-content">
+        <a {% if request.path == "/" %}class="active-overlay"{% endif %} href="/" onclick="toggleNav()">Blog</a>
+        <a {% if request.path == "/projects/" %}class="active-overlay"{% endif %} href="/projects">Projects</a>
+        <a {% if request.path == "/about-me/" %}class="active-overlay"{% endif %} href="/about-me" onclick="toggleNav()">About Me</a>
+        <a {% if request.path == "/contact/" %}class="active-overlay"{% endif %} href="/contact"  onclick="toggleNav()">Contact</a>
+    </div>
+</div>
+<!-- Navbar -->
+<header class="main-header">
+    <a href="/"><img class="logo" src="{% static 'blog/logo-white.png' %}"></a>
+    <div class="container">
+        <nav>
+            <ul>
+                <li {% if request.path == "/" %}class="active"{% endif %}><a href="/">Blog</a></li>
+                <li {% if request.path == "/projects/" %}class="active"{% endif %}><a href="/projects">Projects</a></li>
+                <li {% if request.path == "/about-me/" %}class="active"{% endif %}><a href="/about-me">About Me</a></li>
+                <li {% if request.path == "/contact/" %}class="active"{% endif %}><a href="/contact">Contact</a></li>
+            </ul>
+            <span id="overlay-toggle" onclick="toggleNav()">&#9776;</span>
+        </nav>
+    </div>
+</header>

@@ -1,33 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-<!-- About Me -->
-<a  class="anchor" name="about"></a>
-<div class="row">
-    <div class="entry-card" id="about-me">
-        <h1 class="entry-title" id="about-me-title">About Me</h1>
-        <div id="about-me-content">
-            <div id="about-me-photo">
-                <img id="user-image" src="{% static 'blog/me.png' %}">
-                <span id="about-me-name">D.J.</span>
-                <span id="about-me-city"><a href="https://www.google.com/maps/place/Minneapolis,+MN/" target="_blank">Minneapolis, MN</a></span>
-            </div>
-            <div class="entry-description">
-                <p>
-                    Greetings!  My name is <b>DJ</b>, and I am an aspiring software developer working hard to break into the industry.  This website is a collection of my completed projects for curious
-                    minds to peruse (as well as a project in itself) so feel free to have a look around.
-                </p>
-                <p>
-                    My current language of choice is Python though I have dabbled in many, and I am currently working to add more projects to this list.
-                    If you have any questions about a project or would just like to chat, feel free to send me an email using the <a href="#contact">form</a> below.  Also please head on over and check out my 
-                    <a href="https://github.com/djleedke" target="_blank">Github</a> if you would like to check out the code!
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Blog Posts -->
-<a class="anchor" name="posts"></a>
 {% for post in posts %}
     {% if post.status == 1 %}
         <div class="row">
@@ -42,23 +16,4 @@
         </div>
     {% endif %}
 {% endfor %}
-<!-- Contact Form -->
-<a class="anchor" name="contact"></a>
-<div class="row">
-    <div class="entry-card contact-card">
-        <h1 class="entry-title">Contact</h1>
-        <div id="contact-form">
-            <form action="contact/" method="post">
-                {% csrf_token %}
-                <label for="name">Name:</label>
-                <input type="text" autocomplete="off" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" autocomplete="off" id="email" name="email">
-                <label for="message" id="message" name="message">Message:</label>
-                <textarea name="message"></textarea>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
-</div>
 {% endblock %}

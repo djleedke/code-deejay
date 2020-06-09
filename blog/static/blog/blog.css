@@ -2,6 +2,8 @@ html, body {
     height:100%;
     width:100%;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    
 }
 
 body {
@@ -59,8 +61,16 @@ nav li {
     margin:0px;
     padding:10px 20px 10px 20px;
     font-size:20px;
-    font-weight: bold;
+
     border-bottom:5px solid transparent;
+}
+
+.active {
+    border-bottom: 5px solid white;
+}
+
+.active-overlay {
+    font-weight: bold;
 }
 
 nav a {
@@ -74,7 +84,7 @@ nav a:hover{
 }
 
 nav li:hover {
-    border-bottom: 5px solid white;
+    font-weight: bold;
     
 }
 
@@ -115,7 +125,7 @@ nav li:hover {
     transition: 0.3s;
     min-width:200px;
   }
-  
+
   #overlay a:hover, #overlay a:focus {
     color: #36454F;
     font-weight: bold;
@@ -144,7 +154,7 @@ nav li:hover {
     border-radius:5px;
     min-height: 0px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width:80%;
     position:relative;
     
@@ -155,9 +165,10 @@ nav li:hover {
 }
 
 .entry-title {
-    padding: 20px 40px 10px 40px;
+    padding: 0px 40px 10px 40px;
     margin-bottom:10px;
     font-size:34px;
+    font-family: 'Karla', sans-serif;
 }
 
 .entry-title a {
@@ -167,6 +178,7 @@ nav li:hover {
 
 .entry-description {
     padding: 0 40px 0px 40px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .entry-description p {
@@ -244,18 +256,14 @@ nav li:hover {
     width:100%;
 }
 
-/*---------- Contact Card ----------*/
-
-.contact-card .entry-title {
-    margin:0px;
-}
+/*---------- Contact ----------*/
 
 #contact-form {
     padding: 0 40px 0 40px;
 }
 
 
-#contact-form textarea {
+#id_message {
     width:100%;
     height:200px;
     margin-right:40px;
@@ -267,7 +275,7 @@ nav li:hover {
 .container {
     min-height: 100%;
     margin-bottom: -30px;
-    padding-bottom: 30px;;
+    padding-bottom: 30px;
 }
 
 footer {
