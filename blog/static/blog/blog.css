@@ -147,9 +147,9 @@ nav li:hover {
     }
   }
 
-/*---------- Entry Cards ----------*/
+/*---------- Post Cards ----------*/
 
-.entry-card{
+.post-card{
     background-color:white;
     border-radius:5px;
     min-height: 0px;
@@ -160,45 +160,47 @@ nav li:hover {
     
 }
 
-.entry-card img {
+.post-card img {
     width:100%;
 }
 
-.entry-title {
+.post-title {
     padding: 0px 40px 10px 40px;
     margin-bottom:10px;
     font-size:34px;
     font-family: 'Karla', sans-serif;
 }
 
-.entry-title a {
+.post-title a {
     text-decoration: none;
     color:inherit;
 }
 
-.entry-description {
+.post-description {
     padding: 0 40px 0px 40px;
     font-family: 'Open Sans', sans-serif;
 }
 
-.entry-description p {
+.post-description p {
     margin-bottom: 20px;
 }
 
-.entry-content {
+.post-content {
     padding: 0 40px 20px 40px;
 }
 
-.entry-card hr {
+.post-card hr {
     margin:0px;
 }
 
-.entry-footer {
+.post-footer {
     padding: 10px 0 20px 40px;
     bottom:0;
     font-style: italic;
     color:rgb(145, 145, 145);
 }
+
+/*---------- Post Detail ----------*/
 
 /*---------- Project Card ----------*/
 
