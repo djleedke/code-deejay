@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>CodeDeejay</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, , maximum-scale=1.0, user-scalable=no">
         {% load static %}
         <!-- External CSS -->
         <link rel="stylesheet" href="{% static 'blog/normalize.css' %}">
@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
     </head>
     <body>
-        <!-- Overlay-->
-        <div id="myNav" class="overlay">
-            <div class="overlay-content">
+        <!-- Mobile Overlay-->
+        <div id="overlay">
+            <div id="overlay-content">
               <a href="/#about" onclick="toggleNav()">About Me</a>
               <a href="/#posts" onclick="toggleNav()">Blog</a>
               <a href="/projects">Projects</a>
@@ -23,7 +23,7 @@
         </div>
         <!-- Navbar -->
         <header class="main-header">
-            <a href="/"><img class="logo" src="{% static 'blog/logo-small.png' %}"></a>
+            <a href="/"><img class="logo" src="{% static 'blog/logo-white.png' %}"></a>
             <div class="container">
                 <nav>
                     <ul>
@@ -36,19 +36,12 @@
                 </nav>
             </div>
         </header>
-        <style>
-            /* Inline styling not ideal but necessary to load static background image w/ Django */
-            /*body {
-                background-image: url("{% static 'blog/triangles.png' %}");
-                background-repeat:no-repeat;
-                background-size:cover;
-                background-attachment: fixed;
-            }*/
-        </style>
         <!-- Page Content -->
         <div id="content" class="container">
             {% block content %}{% endblock %}
         </div>
+        <!-- Footer -->
+        <footer>&copy; DJ Leedke 2020</footer>
         <!-- My JS -->
         <script src="{% static 'blog/blog.js' %}"></script>
     </body>
