@@ -1,3 +1,4 @@
+
 html, body {
     height:100%;
     width:100%;
@@ -23,11 +24,23 @@ body {
     visibility: hidden;
 }
 
+.container{
+    text-align: center;
+}
+
+/*---------- Buttons ---------- */
+
+input[type=submit] {
+    background-color:#5E7845 ;
+    color:white;
+    border-color:transparent;
+}
+
 /* ---------- Navbar ---------- */
 .main-header{
     display:flex;
     background-color:white;
-    background-color: #36454F;
+    background-color: #2B3B43;
  
     align-items: center;
 
@@ -154,21 +167,44 @@ nav li:hover {
     border-radius:5px;
     min-height: 0px;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width:80%;
-    position:relative;
-    
+    display:inline-block;
 }
 
 .post-card img {
-    width:100%;
+    float:left;
+    margin-top:10px;
+    margin-left: 20px;
+    object-fit: scale-down;
+    border-radius: 5px;
+    width:20%;
+}
+
+.post-preview {
+    margin-left:20px;
+    overflow:hidden;
+
+    min-height: 200px;
+    max-height: 200px;
 }
 
 .post-title {
-    padding: 0px 40px 10px 40px;
-    margin-bottom:10px;
+    padding: 0px 40px 0px 40px;
+    margin-bottom:5px;
     font-size:34px;
     font-family: 'Karla', sans-serif;
+    text-align: left;
+}
+
+.post-description {
+    padding: 0 40px 0px 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+
+.post-title:hover {
+    color:#5E7845;
 }
 
 .post-title a {
@@ -176,13 +212,8 @@ nav li:hover {
     color:inherit;
 }
 
-.post-description {
-    padding: 0 40px 0px 40px;
-    font-family: 'Open Sans', sans-serif;
-}
-
 .post-description p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .post-content {
@@ -194,13 +225,38 @@ nav li:hover {
 }
 
 .post-footer {
-    padding: 10px 0 20px 40px;
+    padding: 10px 40px 20px 40px;
     bottom:0;
     font-style: italic;
+    font-size:.8em;
     color:rgb(145, 145, 145);
 }
 
+.post-footer span {
+    float:right;
+}
+
 /*---------- Post Detail ----------*/
+
+.post-detail-card {
+    background-color:white;
+    border-radius:5px;
+    margin: auto;
+    margin-bottom: 20px;
+    width:80%;
+    text-align: left;
+}
+
+.post-detail-title {
+    margin-bottom: 0px;
+    width:100%;
+}
+
+.post-detail-info {
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 20px;
+}
 
 /*---------- Project Card ----------*/
 
@@ -223,45 +279,26 @@ nav li:hover {
 
 /*---------- About Me ----------*/
 
-#about-me .entry-title {
-    margin:0px;
+#about-me-card {
+    margin-left:20%;
+    margin-right:20%;
 }
 
-#about-me {
-    padding-bottom:20px;
+#about-me-card img {
+    border-radius:5px;
+    margin-bottom: 20px;
 }
 
-#about-me img {
-    width:100px;
-    border-radius: 50%;
-}
-
-#about-me-content{
-    display:flex;
-}
-
-#about-me-photo {
-    margin-left:40px;
-}
-
-#about-me-name {
-    display: inline-block;
-    text-align: center;
-    font-size: .9em;
-    width:100%;
-}
-
-#about-me-city {
-    display: inline-block;
-    text-align: center;
-    font-size: .7em;
-    width:100%;
+#about-me-card p {
+   text-align: left;
 }
 
 /*---------- Contact ----------*/
 
+
 #contact-form {
     padding: 0 40px 0 40px;
+    text-align: left;
 }
 
 
@@ -283,7 +320,7 @@ nav li:hover {
 footer {
 
     height:30px;
-    background-color:#36454F;
+    background-color:#2B3B43;
     text-align:center;
     color:white;
     font-style:italic;
@@ -318,41 +355,40 @@ footer {
         cursor:pointer;
     }
 
-    /*---------- Entry Cards ----------*/
-    .entry-card {
+    /*---------- Post Cards ----------*/
+    .post-card {
         width:95%;
+        margin-right: 10px;
+        margin-bottom: 50px;
     }
 
-    .entry-title {
-       padding-left:20px;
+    .post-card img {
+        display:none;
     }
 
-    .entry-description {
-        padding:0px 20px 0px 20px;
+    .post-title, .post-description {
+       padding:0px;
     }
 
-    .entry-content {
-        padding:0px 20px 20px 20px;
-    }
-
-    .entry-footer {
+    .post-footer {
         padding-left:20px;
         padding-right:20px;
     }
 
+    /*---------- Post Detail ----------*/
+
+    .post-detail-card {
+        width:95%;
+    }
+    
+    .post-detail-title, .post-detail-info, .post-detail-content {
+        padding: 0 10px 0 10px;
+    }
+
     /*---------- About Me ----------*/
-    #about-me-title {
-        text-align: center;
-    }
 
-    #about-me-content {
-        display:block;
-    }
-
-    #about-me-photo {
-        text-align: center;
-        padding-bottom:20px;
-        padding-right:40px;
+    #about-me-card {
+        margin: 0 20px 0 20px;
     }
 
     /*---------- Contact Form ----------*/
@@ -360,6 +396,7 @@ footer {
     #contact-form {
         padding-left:20px;
         padding-right:20px;
+        
     }
 
     #name, #email {

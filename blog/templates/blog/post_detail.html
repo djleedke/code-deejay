@@ -2,14 +2,12 @@
 {% block content %}
 <!-- Post Detail -->
 <div class="row">
-    <div class="entry-card">
-        <h1 class="entry-title">{{post.title}}</h1>
-        <div class="entry-info">By Doug Leedke on 6/9/2020</div>
-        <div class="entry-content">
+    <div class="post-detail-card">
+        <h1 class="post-detail-title">{{post.title}}</h1>
+        <div class="post-detail-info">By {{post.author.first_name}} {{post.author.last_name}} on {{post.created_on.date}}</div>
+        <div class="post-detail-content">
             {{post.content | safe}}  
         </div>
-        <hr>
-        <div class="entry-footer">Posted by: {{post.author.first_name}} {{post.author.last_name}}</div>
     </div>
 </div>
 {% endblock %}
