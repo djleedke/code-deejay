@@ -5,13 +5,14 @@
 {% for post in posts %}
     {% if post.status == 1 %}
         <div class="row">
-            <div class="entry-card">
-                <h1 class="entry-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
-                <div class="entry-description">
-                    {{post.description | safe}}  
+            <div class="post-card">
+                <img src="{% static 'blog/python-logo.png' %}">
+                <div class="post-preview">
+                    <h1 class="post-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
+                    <div class="post-description">
+                        {{post.description | safe}}  
+                    </div>
                 </div>
-                <hr>
-                <div class="entry-footer">Posted by: {{post.author.first_name}} {{post.author.last_name}}</div>
             </div>
         </div>
     {% endif %}
