@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
-from .models import Post
+from .models import Post, Project
 from .config import *
 from .forms import ContactForm
 
@@ -11,7 +11,7 @@ def index(request):
 
     posts = Post.objects.all()
     context = {
-        'posts':posts,
+        'posts': posts,
     }
     
     return render(request, 'blog/index.html', context)
@@ -52,7 +52,12 @@ def contact(request):
 #Page showcasing all projects, big & small
 def projects(request):
 
-    return render(request, 'blog/projects.html')
+    projects = Project.objects.all()
+    
+    context = {
+        'projects': projects,
+    }
+    return render(request, 'blog/projects.html', context)
 
 #---------- Post Detail Page ---------- 
 #Displays details of blog post
@@ -60,7 +65,7 @@ def post_detail(request, slug):
 
     post = Post.objects.get(slug=slug)
     context = {
-        'post':post,
+        'post': post,
     }
 
     return render(request, 'blog/post_detail.html', context)
