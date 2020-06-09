@@ -61,8 +61,16 @@ nav li {
     margin:0px;
     padding:10px 20px 10px 20px;
     font-size:20px;
-    font-weight: bold;
+
     border-bottom:5px solid transparent;
+}
+
+.active {
+    border-bottom: 5px solid white;
+}
+
+.active-overlay {
+    font-weight: bold;
 }
 
 nav a {
@@ -76,7 +84,7 @@ nav a:hover{
 }
 
 nav li:hover {
-    border-bottom: 5px solid white;
+    font-weight: bold;
     
 }
 
@@ -117,7 +125,7 @@ nav li:hover {
     transition: 0.3s;
     min-width:200px;
   }
-  
+
   #overlay a:hover, #overlay a:focus {
     color: #36454F;
     font-weight: bold;
