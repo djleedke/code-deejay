@@ -23,7 +23,7 @@ body {
     visibility: hidden;
 }
 
-#blog-content {
+#content {
     max-width: 1280px;
 }
 
@@ -31,9 +31,10 @@ body {
 /*---------- Buttons ---------- */
 
 input[type=submit] {
-    background-color:#5E7845 ;
+    background-color:  #99ce64;
     color:white;
     border-color:transparent;
+    font-family: 'Karla', sans-serif;
 }
 
 /* ---------- Navbar ---------- */
@@ -244,6 +245,12 @@ nav li:hover {
 
 /*---------- Post Detail ----------*/
 
+#post-detail {
+    display: inline-block;
+    text-align: left;
+    width:70%;
+}
+
 .post-detail-card {
     background-color:white;
     border-radius:5px;
@@ -265,6 +272,12 @@ nav li:hover {
 }
 
 /*---------- Projects ----------*/
+
+#project-list {
+    display: inline-block;
+    text-align: left;
+    width:70%;
+}
 
 .project-card {
     background-color:white;
@@ -334,9 +347,15 @@ nav li:hover {
 
 /*---------- About Me ----------*/
 
+#about-me {
+    display: inline-block;
+    text-align: left;
+    width:70%;
+}
+
 #about-me-card {
-    margin-left:20%;
-    margin-right:20%;
+    margin-left:5%;
+    margin-right:5%;
     text-align: center;
 }
 
@@ -350,6 +369,12 @@ nav li:hover {
 }
 
 /*---------- Contact ----------*/
+
+#contact-me {
+    display: inline-block;
+    text-align: left;
+    width:70%;
+}
 
 #contact-card {
     background-color:white;
@@ -490,6 +515,10 @@ footer {
 
     /*--------- Projects ----------*/
     
+    #project-list {
+        width:95%;
+    }
+
     .project-card-title {
         font-size:1.5em;
     }
@@ -508,11 +537,19 @@ footer {
 
     /*---------- About Me ----------*/
 
+    #about-me {
+        width:95%;
+    }
+
     #about-me-card {
         margin: 0 20px 0 20px;
     }
 
     /*---------- Contact ----------*/
+
+    #contact-me {
+        width:95%;
+    }
 
     #contact-form {
         padding-left:20px;
@@ -524,6 +561,7 @@ footer {
         width:100%;
     }
 
+
     /*---------- Sidebar ---------*/
     #sidebar {
         display: block;
@@ -532,12 +570,15 @@ footer {
         margin-right:5%;
     
     }
-
 }
 
 @media (min-width: 400px){
     .container {
         width: 100%;
+    }
+
+    .columns {
+        margin-left:2.5%
     }
 }
 

@@ -2,11 +2,15 @@
 {% load static %}
 {% block content %}
 <div id="content" class="container">
-    <div class="row">
-        <div id="about-me-card">
-            <img id="user-image" src="{% static 'blog/me.png' %}">
-            {{ about_me.content | safe }}
+    <div id="about-me">
+        <div class="row">
+            <div id="about-me-card">
+                <img id="user-image" src="{% static 'blog/me.png' %}">
+                {{ about_me.content | safe }}
+            </div>
         </div>
     </div>
+    <!-- Sidebar -->
+    {% include "blog/sidebar.html" %}
 </div>
 {% endblock %}

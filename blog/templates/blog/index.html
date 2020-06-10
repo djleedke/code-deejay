@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-<div id="blog-content" class="container">
+<div id="content" class="container">
 <!-- Blog Posts -->
     <div id="blog-posts">
         {% for post in posts %}
@@ -20,26 +20,7 @@
             {% endif %}
         {% endfor %}
     </div>
-<!-- Sidebar -->
-    <div id="sidebar">
-        <div id="sidebar-popular">
-            <h3 class="sidebar-banner">Popular Posts</h3>
-            <ul>
-                <li>A Place for All the Things</li>
-                <hr>
-                <li>Extra! Extra! Read All About It!</li>
-                <hr>
-                <li>Post 3</li>
-                <hr>
-                <li>Post 4</li>
-                <hr>
-                <li>Post 5</li>
-                <hr>
-            </ul>    
-        </div>
-        <div id="sidebar-tags">
-            <h3 class="sidebar-banner">Tags</h3> 
-        </div>
-    </div>
+    <!-- Sidebar -->
+    {% include "blog/sidebar.html" %}
 </div>
 {% endblock %}
