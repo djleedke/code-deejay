@@ -2,27 +2,31 @@
 {% block content %}
 <div id="content" class="container">
     <div class="row">
-        <div id="contact-card">
-            <form id="contact-form" action="/contact/" method="post">
-                {% csrf_token %}
-                <div>
-                    {{ form.name.errors}}
-                    <label for="{{ form.name.id_forlabel }}">Name:</label>
-                    {{ form.name }}
-                </div>
-                <div>
-                    {{ form.email.errors}}
-                    <label for="{{ form.email.id_forlabel }}">Email:</label>
-                    {{ form.email }}
-                </div>
-                <div>
-                    {{ form.message.errors}}
-                    <label for="{{ form.message.id_forlabel }}">Message:</label>
-                    {{ form.message }}
-                </div>
-                <input type="submit" value="Submit">
-            </form>
+        <div id="contact-me">
+            <div id="contact-card">
+                <form id="contact-form" action="/contact/" method="post">
+                    {% csrf_token %}
+                    <div>
+                        {{ form.name.errors}}
+                        <label for="{{ form.name.id_forlabel }}">Name:</label>
+                        {{ form.name }}
+                    </div>
+                    <div>
+                        {{ form.email.errors}}
+                        <label for="{{ form.email.id_forlabel }}">Email:</label>
+                        {{ form.email }}
+                    </div>
+                    <div>
+                        {{ form.message.errors}}
+                        <label for="{{ form.message.id_forlabel }}">Message:</label>
+                        {{ form.message }}
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
+        <!-- Sidebar -->
+        {% include "blog/sidebar.html" %}
     </div>
 </div>
 {% endblock %}

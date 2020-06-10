@@ -2,21 +2,25 @@
 {% block content %}
 <div id="content" class="container">
     <!-- Projects -->
-    <div class="row">
-    {% for project in projects %}
-        <div class="three columns project-card">
-            <div class="project-card-title">{{ project.title }}</div>
-            {% if project.image %}<img src="{{ project.image.url }}">{% endif %}
-            <div class="project-popup">
-                <a href="{{ project.project_url }}" target="_blank" class="popup-link-left">Site</a>
-                <a href="{{ project.github_url }}" target="_blank" class="popup-link-right">Github</a>
+    <div id="project-list">
+        <div class="row">
+        {% for project in projects %}
+            <div class="three columns project-card">
+                <div class="project-card-title">{{ project.title }}</div>
+                {% if project.image %}<img src="{{ project.image.url }}">{% endif %}
+                <div class="project-popup">
+                    <a href="{{ project.project_url }}" target="_blank" class="popup-link-left">Site</a>
+                    <a href="{{ project.github_url }}" target="_blank" class="popup-link-right">Github</a>
+                </div>
             </div>
+            {% if forloop.counter|divisibleby:4 %}
         </div>
-        {% if forloop.counter|divisibleby:4 %}
+        <div class="row">
+            {% endif %}
+        {% endfor %}
+        </div>
     </div>
-    <div class="row">
-        {% endif %}
-    {% endfor %}
-    </div>
+    <!-- Sidebar -->
+    {% include "blog/sidebar.html" %}
 </div>
 {% endblock %}
