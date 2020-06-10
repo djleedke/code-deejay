@@ -264,23 +264,72 @@ nav li:hover {
     margin-bottom: 20px;
 }
 
-/*---------- Project Card ----------*/
+/*---------- Projects ----------*/
 
 .project-card {
     background-color:white;
     border-radius:5px;
     margin-bottom:40px;
-    padding:5px;
-
+    padding:0px;
+    position:relative;
 }
 
 .project-card-title {
     text-align: center;
-    font-weight: bold;
+    font-size:1.25em;
+    font-family: 'Karla', sans-serif;
+    padding-bottom:10px;
 }
 
 .project-card img {
     width: 100%;
+}
+
+.project-popup {
+    position:absolute;
+    bottom:0;
+    height:0px;
+    visibility:hidden;
+    width:100%;
+    overflow:hidden;
+    opacity:.1;
+    background-color: rgb(0,0,0,0);
+
+}
+.project-card:hover .project-popup{
+    visibility: visible;
+    height:30px;
+    opacity: 1;
+    transition: opacity .75s, height .75s;
+    background-color: rgb(0,0,0,.8);
+}
+
+.project-card:not(:hover) .project-popup{
+    visibility: visible;
+    height:0px;
+    opacity: 0;
+    transition: opacity .75s, height .75s;
+    background-color: rgb(0,0,0,.8);
+}
+
+.popup-link-left, .popup-link-right {
+    color:white;
+    font-size: .8em;
+    text-decoration: none;
+}
+.popup-link-left:hover, .popup-link-right:hover {
+    font-weight: bold;
+    color:white;
+}
+
+.popup-link-left {
+    float:left;
+    padding-left:15px;
+}
+
+.popup-link-right {
+    float:right;
+    padding-right:15px;
 }
 
 /*---------- About Me ----------*/
@@ -437,6 +486,24 @@ footer {
     
     .post-detail-title, .post-detail-info, .post-detail-content {
         padding: 0 10px 0 10px;
+    }
+
+    /*--------- Projects ----------*/
+    
+    .project-card-title {
+        font-size:1.5em;
+    }
+
+    .project-popup {
+        padding-top:5px;
+    }
+
+    .project-card:hover .project-popup{
+        height: 40px;
+    }
+
+    .popup-link-left, .popup-link-right {
+        font-size:1.5em;
     }
 
     /*---------- About Me ----------*/
