@@ -15,11 +15,9 @@
     <body>
         {% include "blog/navbar.html" %}
         <!-- Page Content -->
-        <div id="content" class="container">
-            {% block content %}{% endblock %}
-        </div>
+        {% block content %}{% endblock %}
         <!-- Footer -->
-        <footer>&copy; DJ Leedke 2020</footer>
+        <footer>&copy; D.J. Leedke 2020</footer>
         <!-- My JS -->
         <script src="{% static 'blog/blog.js' %}"></script>
     </body>

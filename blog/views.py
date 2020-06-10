@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
-from .models import Post, Project
+from .models import Post, Project, Content
 from .config import *
 from .forms import ContactForm
 
@@ -18,7 +18,12 @@ def index(request):
 
 #---------- About Me ----------
 def about_me(request):
-    return render(request, 'blog/about-me.html')
+
+    about_me = Content.objects.get(title='About Me')
+    context = {
+        'about_me': about_me
+    }
+    return render(request, 'blog/about-me.html', context)
 
 
 #---------- Contact Form ----------

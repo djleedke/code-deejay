@@ -1,12 +1,14 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<!-- Post Detail -->
-<div class="row">
-    <div class="post-detail-card">
-        <h1 class="post-detail-title">{{post.title}}</h1>
-        <div class="post-detail-info">By {{post.author.first_name}} {{post.author.last_name}} on {{post.created_on.date}}</div>
-        <div class="post-detail-content">
-            {{post.content | safe}}  
+<div id="content" class="container">
+    <!-- Post Detail -->
+    <div class="row">
+        <div class="post-detail-card">
+            <h1 class="post-detail-title">{{post.title}}</h1>
+            <div class="post-detail-info">By {{post.author.first_name}} {{post.author.last_name}} on {{post.created_on.date}}</div>
+            <div class="post-detail-content">
+                {{post.content | safe}}  
+            </div>
         </div>
     </div>
 </div>
