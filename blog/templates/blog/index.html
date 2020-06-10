@@ -1,20 +1,45 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
+<div id="blog-content" class="container">
 <!-- Blog Posts -->
-{% for post in posts %}
-    {% if post.status == 1 %}
-        <div class="row">
-            <div class="post-card">
-                <img src="{% static 'blog/python-logo.png' %}">
-                <div class="post-preview">
-                    <h1 class="post-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
-                    <div class="post-description">
-                        {{post.description | safe}}  
+    <div id="blog-posts">
+        {% for post in posts %}
+            {% if post.status == 1 %}
+                <div class="row">
+                    <div class="post-card">
+                        <img src="{% static 'blog/python-logo.png' %}">
+                        <div class="post-preview">
+                            <h1 class="post-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
+                            <div class="post-description">
+                                {{post.description | safe}}  
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+<!-- Sidebar -->
+    <div id="sidebar">
+        <div id="sidebar-popular">
+            <h3 class="sidebar-banner">Popular Posts</h3>
+            <ul>
+                <li>A Place for All the Things</li>
+                <hr>
+                <li>Extra! Extra! Read All About It!</li>
+                <hr>
+                <li>Post 3</li>
+                <hr>
+                <li>Post 4</li>
+                <hr>
+                <li>Post 5</li>
+                <hr>
+            </ul>    
         </div>
-    {% endif %}
-{% endfor %}
+        <div id="sidebar-tags">
+            <h3 class="sidebar-banner">Tags</h3> 
+        </div>
+    </div>
+</div>
 {% endblock %}

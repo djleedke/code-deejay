@@ -11,12 +11,11 @@ body {
     font-size:1.75em;
     line-height: 1.75em;
     background:white;
-
 }
 
 /* ---------- Miscellaneous ---------- */
 
-/* Stick Navbar */
+/* Sticky Navbar */
 .anchor {
     display:block;
     position:relative;
@@ -24,9 +23,10 @@ body {
     visibility: hidden;
 }
 
-.container{
-    text-align: center;
+#blog-content {
+    max-width: 1280px;
 }
+
 
 /*---------- Buttons ---------- */
 
@@ -53,9 +53,8 @@ input[type=submit] {
 }
 
 /* Sticky Navbar */
-#content {
+#content, #blog-content {
     padding-top:75px;
-    
 }
 
 .logo {
@@ -160,7 +159,15 @@ nav li:hover {
     }
   }
 
-/*---------- Post Cards ----------*/
+
+
+/*---------- Blog ----------*/
+
+#blog-posts{
+    text-align: left;
+    width:70%;
+    display: inline-block;
+}
 
 .post-card{
     background-color:white;
@@ -168,17 +175,16 @@ nav li:hover {
     min-height: 0px;
     margin: auto;
     margin-bottom: 20px;
-    width:80%;
     display:inline-block;
 }
 
 .post-card img {
     float:left;
-    margin-top:10px;
+    margin-top:25px;
     margin-left: 20px;
     object-fit: scale-down;
     border-radius: 5px;
-    width:20%;
+    width:15%;
 }
 
 .post-preview {
@@ -282,6 +288,7 @@ nav li:hover {
 #about-me-card {
     margin-left:20%;
     margin-right:20%;
+    text-align: center;
 }
 
 #about-me-card img {
@@ -295,8 +302,16 @@ nav li:hover {
 
 /*---------- Contact ----------*/
 
+#contact-card {
+    background-color:white;
+    border-radius:5px;
+    min-height: 0px;
+    margin: auto;
+    margin-bottom: 20px;
+}
 
 #contact-form {
+    margin:0 10% 0 10%;
     padding: 0 40px 0 40px;
     text-align: left;
 }
@@ -309,6 +324,40 @@ nav li:hover {
     resize:none;
 }
 
+/*---------- Sidebar ----------*/
+
+#sidebar {
+    display: inline-block;
+    vertical-align: top;
+    width:25%;
+    padding-bottom:20px; 
+}
+
+.sidebar-banner {
+    
+    background-color:#5E7845;
+    color:white;
+    font-weight: bold;
+    
+}
+
+.sidebar-banner {
+    padding: 5px 10px 5px 10px;
+    font-size:1.2em;
+    margin-bottom: 5px;
+    font-family: 'Karla', sans-serif;
+}
+
+#sidebar-popular li {
+    list-style: none;
+    padding-left:10px;
+    margin-bottom: 5px;
+}
+
+#sidebar-popular hr {
+    margin:0;
+}
+
 /*---------- Footer ---------- */
 
 .container {
@@ -318,7 +367,7 @@ nav li:hover {
 }
 
 footer {
-
+    width:100%;
     height:30px;
     background-color:#2B3B43;
     text-align:center;
@@ -355,7 +404,12 @@ footer {
         cursor:pointer;
     }
 
-    /*---------- Post Cards ----------*/
+    /*---------- Blog ----------*/
+    
+    #blog-posts {
+        width:100%;
+    }
+    
     .post-card {
         width:95%;
         margin-right: 10px;
@@ -391,18 +445,27 @@ footer {
         margin: 0 20px 0 20px;
     }
 
-    /*---------- Contact Form ----------*/
+    /*---------- Contact ----------*/
 
     #contact-form {
         padding-left:20px;
         padding-right:20px;
-        
+        margin: 0;
     }
 
     #name, #email {
         width:100%;
     }
+
+    /*---------- Sidebar ---------*/
+    #sidebar {
+        display: block;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
     
+    }
+
 }
 
 @media (min-width: 400px){

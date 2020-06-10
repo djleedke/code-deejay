@@ -1,16 +1,18 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<!-- Projects -->
-<div class="row">
-{% for project in projects %}
-    <div class="three columns project-card">
-        <div class="project-card-title">{{ project.title }}</div>
-        <a href="{{ project.project_url }}" target="_blank"><img src="{{ project.image.url }}"></a>
+<div id="content" class="container">
+    <!-- Projects -->
+    <div class="row">
+    {% for project in projects %}
+        <div class="three columns project-card">
+            <div class="project-card-title">{{ project.title }}</div>
+            <a href="{{ project.project_url }}" target="_blank"><img src="{{ project.image.url }}"></a>
+        </div>
+        {% if forloop.counter|divisibleby:4 %}
     </div>
-    {% if forloop.counter|divisibleby:4 %}
-</div>
-<div class="row">
-    {% endif %}
-{% endfor %}
+    <div class="row">
+        {% endif %}
+    {% endfor %}
+    </div>
 </div>
 {% endblock %}
