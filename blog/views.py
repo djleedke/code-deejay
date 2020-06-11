@@ -10,8 +10,11 @@ from .forms import ContactForm
 def index(request):
 
     posts = Post.objects.all()
+    tags = Post.tags.all()
+
     context = {
         'posts': posts,
+        'tags':tags,
     }
     
     return render(request, 'blog/index.html', context)
@@ -20,8 +23,11 @@ def index(request):
 def about_me(request):
 
     about_me = Content.objects.get(title='About Me')
+    tags = Post.tags.all()
+
     context = {
-        'about_me': about_me
+        'about_me': about_me,
+        'tags': tags,
     }
     return render(request, 'blog/about-me.html', context)
 
@@ -51,16 +57,25 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render(request, 'blog/contact.html', {'form':form})
+    tags = Post.tags.all()
+    
+    context = {
+        'form':form,
+        'tags':tags,
+    }
+
+    return render(request, 'blog/contact.html', context)
 
 #---------- Projects Page ----------
 #Page showcasing all projects, big & small
 def projects(request):
 
     projects = Project.objects.all()
-    
+    tags = Post.tags.all()
+
     context = {
         'projects': projects,
+        'tags':tags,
     }
     return render(request, 'blog/projects.html', context)
 
@@ -69,8 +84,11 @@ def projects(request):
 def post_detail(request, slug):
 
     post = Post.objects.get(slug=slug)
+    tags = Post.tags.all()
+
     context = {
         'post': post,
+        'tags':tags,
     }
 
     return render(request, 'blog/post_detail.html', context)

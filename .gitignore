@@ -3,6 +3,9 @@
 #My files
 config.py
 
+#My folders
+media/
+
 ### OSX ###
 .DS_Store
 .AppleDouble

@@ -1,4 +1,5 @@
 <div id="sidebar">
+    <div id="sidebar-top-ad"></div>
     <div id="sidebar-popular">
         <h3 class="sidebar-banner">Popular Posts</h3>
         <ul>
@@ -6,15 +7,18 @@
             <hr>
             <li>Extra! Extra! Read All About It!</li>
             <hr>
-            <li>Post 3</li>
+            <li>This is a Placeholder Title</li>
             <hr>
-            <li>Post 4</li>
+            <li>Lorem Ipsum Aliquam Erat</li>
             <hr>
             <li>Post 5</li>
             <hr>
         </ul>    
     </div>
     <div id="sidebar-tags">
-        <h3 class="sidebar-banner">Tags</h3> 
+        <h3 class="sidebar-banner">Tags</h3>
+        {% for tag in tags %}
+            <div class="tag">{{tag.name}}</div> 
+        {% endfor %}
     </div>
 </div>

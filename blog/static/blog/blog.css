@@ -243,6 +243,16 @@ nav li:hover {
     float:right;
 }
 
+#blog-list-ad {
+    height:100px;
+    width:60%;
+    text-align:center;
+    margin: auto;
+    margin-bottom:30px;
+    margin-top:-30px;
+    background-color:#99ccff;
+}
+
 /*---------- Post Detail ----------*/
 
 #post-detail {
@@ -407,6 +417,12 @@ nav li:hover {
     padding-bottom:20px; 
 }
 
+#sidebar-top-ad {
+    height:300px;
+    margin: 0 30px 30px 30px;
+    background-color:#99ccff;
+}
+
 .sidebar-banner {
     
     background-color: #a6d477;
@@ -426,10 +442,23 @@ nav li:hover {
     list-style: none;
     padding-left:10px;
     margin-bottom: 5px;
+    font-size: .9em;
 }
 
 #sidebar-popular hr {
     margin:0;
+}
+
+.tag {
+    display:inline;
+    border-radius: 8px;
+    font-size: .8em;
+    padding: 5px;
+    background-color: #ffe6e6;
+}
+
+.tag:hover {
+    background-color:#ffcccc;
 }
 
 /*---------- Footer ---------- */
