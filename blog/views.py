@@ -22,11 +22,11 @@ def index(request):
 #---------- About Me ----------
 def about_me(request):
 
-    about_me = Content.objects.get(title='About Me')
+    content = Content.objects.get(title='About Me')
     tags = Post.tags.all()
 
     context = {
-        'about_me': about_me,
+        'content': content,
         'tags': tags,
     }
     return render(request, 'blog/about-me.html', context)
@@ -57,9 +57,11 @@ def contact(request):
     else:
         form = ContactForm()
 
+    content = Content.objects.get(title='Contact');
     tags = Post.tags.all()
     
     context = {
+        'content':content,
         'form':form,
         'tags':tags,
     }
