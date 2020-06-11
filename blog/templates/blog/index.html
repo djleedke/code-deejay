@@ -8,7 +8,7 @@
             {% if post.status == 1 %}
                 <div class="row">
                     <div class="post-card">
-                        <img src="{% static 'blog/python-logo.png' %}">
+                        <img src="media/images/HTML5.png">
                         <div class="post-preview">
                             <h1 class="post-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
                             <div class="post-description">
@@ -25,6 +25,5 @@
     </div>
     <!-- Sidebar -->
     {% include "blog/sidebar.html" %}
-
 </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Project, Content
+from .models import Post, Project, Content, Image
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -11,6 +11,10 @@ class ProjectAdmin(admin.ModelAdmin):
 class ContentAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'updated_on')
 
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ('title', 'image')
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Content, ContentAdmin)
+admin.site.register(Image, ImageAdmin)

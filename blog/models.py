@@ -39,3 +39,10 @@ class Content(models.Model):
 
     def __str__(self):
         return self.title
+
+class Image(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    image = models.ImageField(blank=True, null=True, upload_to="images/")
+
+    def __str__(self):
+        return self.title

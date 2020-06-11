@@ -364,18 +364,21 @@ nav li:hover {
 }
 
 #about-me-card {
-    margin-left:5%;
-    margin-right:5%;
-    text-align: center;
+    margin-left:10%;
+    margin-right:10%;
+    text-align: left;
 }
+
 
 #about-me-card img {
     border-radius:5px;
-    margin-bottom: 20px;
+    margin-right:20px;
+    float:left;
 }
 
 #about-me-card p {
    text-align: left;
+  
 }
 
 /*---------- Contact ----------*/
@@ -568,6 +571,7 @@ footer {
 
     #about-me {
         width:95%;
+        
     }
 
     #about-me-card {
