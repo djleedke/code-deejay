@@ -9,12 +9,10 @@ from .forms import ContactForm
 #Main page w/ about me, blog, and contact form
 def index(request):
 
-    posts = Post.objects.all()
-    tags = Post.tags.all()
+    posts = Post.objects.all().order_by('-created_on')
 
     context = {
         'posts': posts,
-        'tags':tags,
     }
     
     return render(request, 'blog/index.html', context)
@@ -23,12 +21,11 @@ def index(request):
 def about_me(request):
 
     content = Content.objects.get(title='About Me')
-    tags = Post.tags.all()
 
     context = {
         'content': content,
-        'tags': tags,
     }
+
     return render(request, 'blog/about-me.html', context)
 
 
@@ -58,12 +55,10 @@ def contact(request):
         form = ContactForm()
 
     content = Content.objects.get(title='Contact');
-    tags = Post.tags.all()
     
     context = {
         'content':content,
         'form':form,
-        'tags':tags,
     }
 
     return render(request, 'blog/contact.html', context)
@@ -73,11 +68,9 @@ def contact(request):
 def projects(request):
 
     projects = Project.objects.all()
-    tags = Post.tags.all()
 
     context = {
         'projects': projects,
-        'tags':tags,
     }
     return render(request, 'blog/projects.html', context)
 
@@ -86,11 +79,14 @@ def projects(request):
 def post_detail(request, slug):
 
     post = Post.objects.get(slug=slug)
-    tags = Post.tags.all()
 
     context = {
         'post': post,
-        'tags':tags,
     }
 
     return render(request, 'blog/post_detail.html', context)
+
+
+
+
+

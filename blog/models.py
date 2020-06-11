@@ -26,6 +26,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     tags = TaggableManager()
     post_image = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, default='')
+    popular = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

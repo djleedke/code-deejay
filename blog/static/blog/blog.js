@@ -10,3 +10,13 @@ function toggleNav(){
         overlay = true;
     }
 }
+
+/*
+$(document).ready(function(){
+
+    $.ajax({
+        url: '/ajax/popular_posts/'
+    })
+
+
+});*/
