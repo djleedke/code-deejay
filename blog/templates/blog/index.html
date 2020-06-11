@@ -16,11 +16,15 @@
                             </div>
                         </div>
                     </div>
+                    {% if forloop.first %}
+                        <div id="blog-list-ad"></div>
+                    {% endif %}
                 </div>
             {% endif %}
         {% endfor %}
     </div>
     <!-- Sidebar -->
     {% include "blog/sidebar.html" %}
+
 </div>
 {% endblock %}
