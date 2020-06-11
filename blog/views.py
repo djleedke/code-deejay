@@ -9,12 +9,10 @@ from .forms import ContactForm
 #Main page w/ about me, blog, and contact form
 def index(request):
 
-    posts = Post.objects.all()
-    tags = Post.tags.all()
+    posts = Post.objects.all().order_by('-created_on')
 
     context = {
         'posts': posts,
-        'tags':tags,
     }
     
     return render(request, 'blog/index.html', context)
@@ -22,13 +20,12 @@ def index(request):
 #---------- About Me ----------
 def about_me(request):
 
-    about_me = Content.objects.get(title='About Me')
-    tags = Post.tags.all()
+    content = Content.objects.get(title='About Me')
 
     context = {
-        'about_me': about_me,
-        'tags': tags,
+        'content': content,
     }
+
     return render(request, 'blog/about-me.html', context)
 
 
@@ -57,11 +54,11 @@ def contact(request):
     else:
         form = ContactForm()
 
-    tags = Post.tags.all()
+    content = Content.objects.get(title='Contact');
     
     context = {
+        'content':content,
         'form':form,
-        'tags':tags,
     }
 
     return render(request, 'blog/contact.html', context)
@@ -70,12 +67,10 @@ def contact(request):
 #Page showcasing all projects, big & small
 def projects(request):
 
-    projects = Project.objects.all()
-    tags = Post.tags.all()
+    projects = Project.objects.all().order_by('order')
 
     context = {
         'projects': projects,
-        'tags':tags,
     }
     return render(request, 'blog/projects.html', context)
 
@@ -84,11 +79,26 @@ def projects(request):
 def post_detail(request, slug):
 
     post = Post.objects.get(slug=slug)
-    tags = Post.tags.all()
 
     context = {
         'post': post,
-        'tags':tags,
     }
 
     return render(request, 'blog/post_detail.html', context)
+
+#--------- Tag Detail ----------
+#Displays posts associated w/ clicked tags
+def tag_detail(request, slug):
+
+    posts = Post.objects.filter(tags__slug__in=[slug])
+
+    context = {
+      'posts':posts,
+    }
+
+    return render(request, 'blog/index.html', context)
+
+
+
+
+

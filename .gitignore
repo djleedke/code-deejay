@@ -5,6 +5,7 @@ config.py
 
 #My folders
 media/
+images/
 
 ### OSX ###
 .DS_Store

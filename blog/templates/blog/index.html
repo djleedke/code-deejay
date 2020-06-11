@@ -8,12 +8,18 @@
             {% if post.status == 1 %}
                 <div class="row">
                     <div class="post-card">
-                        <img src="{% static 'blog/python-logo.png' %}">
+                        {% if post.post_image %}
+                        <img src="/media/{{ post.post_image.image.name }}">
+                        {% else %}
+                        <img>
+                        {% endif %}
                         <div class="post-preview">
-                            <h1 class="post-title"><a href="/{{post.slug}}">{{post.title}}</a></h1>
-                            <div class="post-description">
-                                {{post.description | safe}}  
-                            </div>
+                            <a href="/{{post.slug}}">
+                                <h1 class="post-title">{{post.title}}</h1>
+                                <div class="post-description">
+                                    {{post.description | safe}}  
+                                </div>
+                            </a>
                         </div>
                     </div>
                     {% if forloop.first %}
@@ -25,6 +31,5 @@
     </div>
     <!-- Sidebar -->
     {% include "blog/sidebar.html" %}
-
 </div>
 {% endblock %}

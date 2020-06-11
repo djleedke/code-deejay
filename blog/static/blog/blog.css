@@ -214,7 +214,7 @@ nav li:hover {
     color:#5E7845;
 }
 
-.post-title a {
+.post-preview a {
     text-decoration: none;
     color:inherit;
 }
@@ -266,7 +266,7 @@ nav li:hover {
     border-radius:5px;
     margin: auto;
     margin-bottom: 20px;
-    width:80%;
+    margin-right:10%;
     text-align: left;
 }
 
@@ -364,18 +364,20 @@ nav li:hover {
 }
 
 #about-me-card {
-    margin-left:5%;
-    margin-right:5%;
-    text-align: center;
+    margin-right:10%;
+    text-align: left;
 }
+
 
 #about-me-card img {
     border-radius:5px;
-    margin-bottom: 20px;
+    margin-right:20px;
+    float:left;
 }
 
 #about-me-card p {
    text-align: left;
+  
 }
 
 /*---------- Contact ----------*/
@@ -395,8 +397,8 @@ nav li:hover {
 }
 
 #contact-form {
-    margin:0 10% 0 10%;
-    padding: 0 40px 0 40px;
+    margin-left:0;
+    margin-right:20%;
     text-align: left;
 }
 
@@ -445,11 +447,22 @@ nav li:hover {
     font-size: .9em;
 }
 
+#sidebar-popular a {
+    text-decoration: none;
+    color:black;
+}
+
+#sidebar-popular a:hover {
+    color:#5E7845;
+}
+
 #sidebar-popular hr {
     margin:0;
 }
 
 .tag {
+    text-decoration: none;
+    color:black;
     display:inline;
     border-radius: 8px;
     font-size: .8em;
@@ -459,6 +472,7 @@ nav li:hover {
 
 .tag:hover {
     background-color:#ffcccc;
+    color:black;
 }
 
 /*---------- Footer ---------- */
@@ -477,6 +491,12 @@ footer {
     color:white;
     font-style:italic;
     font-size:.75em;
+}
+
+#footer-content {
+    max-width:1280px;
+    margin:auto;
+    text-align: left;
 }
 
 /*---------- Media Queries ----------*/
@@ -568,6 +588,7 @@ footer {
 
     #about-me {
         width:95%;
+        
     }
 
     #about-me-card {
@@ -598,6 +619,11 @@ footer {
         margin-left:5%;
         margin-right:5%;
     
+    }
+
+    /*---------- Footer ----------*/
+    #footer-content {
+        margin-left:5%;
     }
 }
 

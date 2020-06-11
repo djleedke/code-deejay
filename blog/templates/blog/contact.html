@@ -4,7 +4,9 @@
     <div class="row">
         <div id="contact-me">
             <div id="contact-card">
+                
                 <form id="contact-form" action="/contact/" method="post">
+                    {{ content.content | safe }}
                     {% csrf_token %}
                     <div>
                         {{ form.name.errors}}
