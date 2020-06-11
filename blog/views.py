@@ -67,7 +67,7 @@ def contact(request):
 #Page showcasing all projects, big & small
 def projects(request):
 
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('order')
 
     context = {
         'projects': projects,

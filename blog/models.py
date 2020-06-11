@@ -37,6 +37,7 @@ class Project(models.Model):
     github_url = models.URLField(default='')
     project_url = models.URLField(default='')
     image = models.ImageField(blank=True, null=True, upload_to="projects/")
+    order = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
