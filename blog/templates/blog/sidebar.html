@@ -3,22 +3,16 @@
     <div id="sidebar-popular">
         <h3 class="sidebar-banner">Popular Posts</h3>
         <ul>
-            <li>A Place for All the Things</li>
-            <hr>
-            <li>Extra! Extra! Read All About It!</li>
-            <hr>
-            <li>This is a Placeholder Title</li>
-            <hr>
-            <li>Lorem Ipsum Aliquam Erat</li>
-            <hr>
-            <li>Post 5</li>
-            <hr>
+            {% for post in popular_posts %}
+                <li><a href="/{{post.slug}}">{{post.title}}</a></li>
+                <hr>
+            {% endfor %}   
         </ul>    
     </div>
     <div id="sidebar-tags">
         <h3 class="sidebar-banner">Tags</h3>
         {% for tag in tags %}
-            <div class="tag">{{tag.name}}</div> 
+            <a class="tag" href="/tags/{{tag.slug}}">{{tag.name}}</a>
         {% endfor %}
     </div>
 </div>

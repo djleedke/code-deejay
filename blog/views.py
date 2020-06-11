@@ -86,6 +86,18 @@ def post_detail(request, slug):
 
     return render(request, 'blog/post_detail.html', context)
 
+#--------- Tag Detail ----------
+#Displays posts associated w/ clicked tags
+def tag_detail(request, slug):
+
+    posts = Post.objects.filter(tags__slug__in=[slug])
+
+    context = {
+      'posts':posts,
+    }
+
+    return render(request, 'blog/index.html', context)
+
 
 
 
