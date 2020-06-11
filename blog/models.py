@@ -8,6 +8,13 @@ STATUS = (
     (1,"Publish")
 )
 
+class Image(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    image = models.ImageField(blank=True, null=True, upload_to="images/")
+
+    def __str__(self):
+        return self.title
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -18,6 +25,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     tags = TaggableManager()
+    post_image = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, default='')
 
     def __str__(self):
         return self.title
@@ -40,9 +48,3 @@ class Content(models.Model):
     def __str__(self):
         return self.title
 
-class Image(models.Model):
-    title = models.CharField(max_length=100, unique=True)
-    image = models.ImageField(blank=True, null=True, upload_to="images/")
-
-    def __str__(self):
-        return self.title
