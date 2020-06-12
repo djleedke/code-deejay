@@ -6,28 +6,28 @@
     <div id="blog-posts">
         {% for post in posts %}
             {% if post.status == 1 %}
-                <div class="row">
-                    <div class="post-card">
-                        {% if post.post_image %}
-                        <img src="/media/{{ post.post_image.image.name }}">
-                        {% else %}
-                        <img>
-                        {% endif %}
-                        <div class="post-preview">
-                            <a href="/{{post.slug}}">
-                                <h1 class="post-title">{{post.title}}</h1>
-                                <div class="post-description">
-                                    {{post.description | safe}}  
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    {% if forloop.first %}
-                        <div id="blog-list-ad"></div>
+                <div class="post-card">
+                    {% if post.post_image %}
+                    <img src="/media/{{ post.post_image.image.name }}">
+                    {% else %}
+                    <img>
                     {% endif %}
+                    <div class="post-preview">
+                        <a href="/{{post.slug}}">
+                            <h1 class="post-title">{{post.title}}</h1>
+                            <div class="post-description">
+                                {{post.description | safe}}  
+                            </div>
+                        </a>
+                    </div>
                 </div>
+                {% if forloop.first %}
+                    <div class="blog-list-ad"></div>
+                {% endif %}
             {% endif %}
         {% endfor %}
+        <div class="blog-list-ad"></div>
+        {% include "blog/popular.html" %}
     </div>
     <!-- Sidebar -->
     {% include "blog/sidebar.html" %}

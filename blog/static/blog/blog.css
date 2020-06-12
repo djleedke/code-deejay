@@ -182,7 +182,7 @@ nav li:hover {
 .post-card img {
     float:left;
     margin-top:25px;
-    margin-left: 20px;
+
     object-fit: scale-down;
     border-radius: 5px;
     width:15%;
@@ -243,13 +243,13 @@ nav li:hover {
     float:right;
 }
 
-#blog-list-ad {
+.blog-list-ad {
     height:100px;
     width:60%;
     text-align:center;
     margin: auto;
     margin-bottom:30px;
-    margin-top:-30px;
+    margin-left:25%;
     background-color:#99ccff;
 }
 
@@ -410,6 +410,21 @@ nav li:hover {
     resize:none;
 }
 
+/*---------- Popular Posts ----------*/
+
+#popular-posts {
+    text-align: left;
+    display: inline-block;
+}
+
+#popular-title {
+
+    font-weight: bold;
+    padding: 5px 0 5px 20px;
+
+    border-radius:5px;
+}
+
 /*---------- Sidebar ----------*/
 
 #sidebar {
@@ -422,6 +437,12 @@ nav li:hover {
 #sidebar-top-ad {
     height:300px;
     margin: 0 30px 30px 30px;
+    background-color:#99ccff;
+}
+
+#sidebar-bottom-ad {
+    height:300px;
+    margin: 30px 30px 30px 30px;
     background-color:#99ccff;
 }
 
@@ -550,6 +571,12 @@ footer {
     .post-footer {
         padding-left:20px;
         padding-right:20px;
+    }
+
+    .blog-list-ad {
+        width:80%;
+        margin:auto;
+        margin-bottom:50px;
     }
 
     /*---------- Post Detail ----------*/
