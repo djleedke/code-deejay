@@ -42,9 +42,8 @@ input[type=submit] {
     display:flex;
     background-color:white;
     background-color: #2B3B43;
- 
     align-items: center;
-
+    
     /* Stick Navbar */
     z-index:10;
     overflow: none;
@@ -74,7 +73,6 @@ nav li {
     margin:0px;
     padding:10px 20px 10px 20px;
     font-size:20px;
-
     border-bottom:5px solid transparent;
 }
 
@@ -98,7 +96,6 @@ nav a:hover{
 
 nav li:hover {
     font-weight: bold;
-    
 }
 
 
@@ -110,32 +107,31 @@ nav li:hover {
 }
 
 #overlay {
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
     background-color: rgb(255,255,255);
-    overflow-x: hidden;
+    overflow-y: hidden;
     transition: 0.5s;
+    max-height: 100%;
   }
   
   #overlay-content {
     position: relative;
-    top: 20%;
     width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    text-align: left;
+    margin-top:45px;
   }
   
   #overlay a {
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 20px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 1.5em;
     color: black;
     display: block;
-    transition: 0.3s;
+    transition: height 0.3s;
     min-width:200px;
   }
 
@@ -182,7 +178,6 @@ nav li:hover {
 .post-card img {
     float:left;
     margin-top:25px;
-
     object-fit: scale-down;
     border-radius: 5px;
     width:15%;
@@ -191,7 +186,6 @@ nav li:hover {
 .post-preview {
     margin-left:20px;
     overflow:hidden;
-
     min-height: 200px;
     max-height: 200px;
 }
@@ -289,6 +283,10 @@ nav li:hover {
 
 /*---------- Portfolio ----------*/
 
+#portfolio-description {
+    padding-right:40px;
+}
+
 #project-list {
     display: inline-block;
     text-align: left;
@@ -383,7 +381,6 @@ nav li:hover {
 
 #about-card p {
    text-align: left;
-  
 }
 
 /*---------- Contact ----------*/
@@ -424,10 +421,8 @@ nav li:hover {
 }
 
 #popular-title {
-
     font-weight: bold;
     padding: 5px 0 5px 20px;
-
     border-radius:5px;
 }
 
@@ -453,7 +448,6 @@ nav li:hover {
 }
 
 .sidebar-banner {
-    
     background-color: #a6d477;
     color:white;
     font-weight: bold;
@@ -554,6 +548,11 @@ footer {
         cursor:pointer;
     }
 
+    #overlay a:hover{
+        color: black;
+        font-weight: normal;
+      }
+
     /*---------- Blog ----------*/
     
     #blog-posts {
@@ -602,6 +601,10 @@ footer {
 
     /*--------- Portfolio ----------*/
     
+    #portfolio-description {
+        padding: 0 20px 0 20px;
+    }
+
     #project-list {
         width:95%;
     }
@@ -656,7 +659,6 @@ footer {
         width:90%;
         margin-left:5%;
         margin-right:5%;
-    
     }
 
     /*---------- Footer ----------*/

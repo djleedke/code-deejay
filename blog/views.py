@@ -69,9 +69,11 @@ def contact(request):
 #Page showcasing all projects, big & small
 def portfolio(request):
 
+    content = Content.objects.get(title='Portfolio')
     projects = Project.objects.all().order_by('order')
 
     context = {
+        'content': content,
         'projects': projects,
     }
     return render(request, 'blog/portfolio.html', context)

@@ -10,7 +10,11 @@
                 {% else %}
                     <img id="user-image" src="{% static 'blog/user.jpg'%}">
                 {% endif %}
-                {{ content.content | safe }}
+                {% if content %}
+                    {{ content.content | safe }}
+                {% else %}
+                    <p>Portfolio content here.</p>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -26,9 +26,9 @@
                 {% endif %}
             {% endif %}
         {% endfor %}
-        {% if posts.count >= 5 %}
-            <div class="blog-list-ad"></div>
-        {% endif %}
+            {% if posts.count >= 5 %}
+                <div class="blog-list-ad"></div>
+            {% endif %}
         {% include "blog/popular.html" %}
     </div>
     <!-- Sidebar -->
