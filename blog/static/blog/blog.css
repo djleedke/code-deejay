@@ -281,7 +281,7 @@ nav li:hover {
     margin-bottom: 20px;
 }
 
-/*---------- Projects ----------*/
+/*---------- Portfolio ----------*/
 
 #project-list {
     display: inline-block;
@@ -355,27 +355,27 @@ nav li:hover {
     padding-right:15px;
 }
 
-/*---------- About Me ----------*/
+/*---------- About ----------*/
 
-#about-me {
+#about {
     display: inline-block;
     text-align: left;
     width:70%;
 }
 
-#about-me-card {
+#about-card {
     margin-right:10%;
     text-align: left;
 }
 
 
-#about-me-card img {
+#about-card img {
     border-radius:5px;
     margin-right:20px;
     float:left;
 }
 
-#about-me-card p {
+#about-card p {
    text-align: left;
   
 }
@@ -594,7 +594,7 @@ footer {
         padding: 0 10px 0 10px;
     }
 
-    /*--------- Projects ----------*/
+    /*--------- Portfolio ----------*/
     
     #project-list {
         width:95%;
@@ -616,14 +616,14 @@ footer {
         font-size:1.5em;
     }
 
-    /*---------- About Me ----------*/
+    /*---------- About ----------*/
 
-    #about-me {
+    #about {
         width:95%;
         
     }
 
-    #about-me-card {
+    #about-card {
         margin: 0 20px 0 20px;
     }
 

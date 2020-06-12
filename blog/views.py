@@ -17,16 +17,16 @@ def index(request):
     
     return render(request, 'blog/index.html', context)
 
-#---------- About Me ----------
-def about_me(request):
+#---------- About ----------
+def about(request):
 
-    content = Content.objects.get(title='About Me')
+    content = Content.objects.get(title='About')
 
     context = {
         'content': content,
     }
 
-    return render(request, 'blog/about-me.html', context)
+    return render(request, 'blog/about.html', context)
 
 
 #---------- Contact Form ----------
@@ -63,16 +63,16 @@ def contact(request):
 
     return render(request, 'blog/contact.html', context)
 
-#---------- Projects Page ----------
+#---------- Portfolio Page ----------
 #Page showcasing all projects, big & small
-def projects(request):
+def portfolio(request):
 
     projects = Project.objects.all().order_by('order')
 
     context = {
         'projects': projects,
     }
-    return render(request, 'blog/projects.html', context)
+    return render(request, 'blog/portfolio.html', context)
 
 #---------- Post Detail Page ---------- 
 #Displays details of blog post

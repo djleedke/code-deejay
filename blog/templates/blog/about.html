@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <div id="content" class="container">
-    <div id="about-me">
+    <div id="about">
         <div class="row">
-            <div id="about-me-card">
+            <div id="about-card">
                 <img id="user-image" src="{% static 'blog/me.png' %}">
                 {{ content.content | safe }}
             </div>
