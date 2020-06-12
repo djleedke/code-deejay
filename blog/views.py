@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
-from .models import Post, Project, Content
+from .models import Post, Project, Content, Image
 from .config import *
 from .forms import ContactForm
 
@@ -17,16 +17,18 @@ def index(request):
     
     return render(request, 'blog/index.html', context)
 
-#---------- About Me ----------
-def about_me(request):
+#---------- About ----------
+def about(request):
 
-    content = Content.objects.get(title='About Me')
+    content = Content.objects.get(title='About')
+    photo = Image.objects.get(title='Me')
 
     context = {
         'content': content,
+        'photo':photo,
     }
 
-    return render(request, 'blog/about-me.html', context)
+    return render(request, 'blog/about.html', context)
 
 
 #---------- Contact Form ----------
@@ -63,16 +65,18 @@ def contact(request):
 
     return render(request, 'blog/contact.html', context)
 
-#---------- Projects Page ----------
+#---------- Portfolio Page ----------
 #Page showcasing all projects, big & small
-def projects(request):
+def portfolio(request):
 
+    content = Content.objects.get(title='Portfolio')
     projects = Project.objects.all().order_by('order')
 
     context = {
+        'content': content,
         'projects': projects,
     }
-    return render(request, 'blog/projects.html', context)
+    return render(request, 'blog/portfolio.html', context)
 
 #---------- Post Detail Page ---------- 
 #Displays details of blog post

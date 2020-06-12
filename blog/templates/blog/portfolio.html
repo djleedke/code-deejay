@@ -3,6 +3,11 @@
 <div id="content" class="container">
     <!-- Projects -->
     <div id="project-list">
+        {% if content %}
+            <div id="portfolio-description">{{ content.content | safe }}</div>
+        {% else %}
+            <div id="portfolio-description"><p>Portfolio content here.</p>></div>
+        {% endif %}
         <div class="row">
         {% for project in projects %}
             <div class="three columns project-card">

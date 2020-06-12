@@ -42,9 +42,8 @@ input[type=submit] {
     display:flex;
     background-color:white;
     background-color: #2B3B43;
- 
     align-items: center;
-
+    
     /* Stick Navbar */
     z-index:10;
     overflow: none;
@@ -74,7 +73,6 @@ nav li {
     margin:0px;
     padding:10px 20px 10px 20px;
     font-size:20px;
-
     border-bottom:5px solid transparent;
 }
 
@@ -98,7 +96,6 @@ nav a:hover{
 
 nav li:hover {
     font-weight: bold;
-    
 }
 
 
@@ -110,32 +107,31 @@ nav li:hover {
 }
 
 #overlay {
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
     background-color: rgb(255,255,255);
-    overflow-x: hidden;
+    overflow-y: hidden;
     transition: 0.5s;
+    max-height: 100%;
   }
   
   #overlay-content {
     position: relative;
-    top: 20%;
     width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    text-align: left;
+    margin-top:45px;
   }
   
   #overlay a {
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 20px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 1.5em;
     color: black;
     display: block;
-    transition: 0.3s;
+    transition: height 0.3s;
     min-width:200px;
   }
 
@@ -182,7 +178,6 @@ nav li:hover {
 .post-card img {
     float:left;
     margin-top:25px;
-    margin-left: 20px;
     object-fit: scale-down;
     border-radius: 5px;
     width:15%;
@@ -191,7 +186,6 @@ nav li:hover {
 .post-preview {
     margin-left:20px;
     overflow:hidden;
-
     min-height: 200px;
     max-height: 200px;
 }
@@ -243,13 +237,13 @@ nav li:hover {
     float:right;
 }
 
-#blog-list-ad {
+.blog-list-ad {
     height:100px;
     width:60%;
     text-align:center;
     margin: auto;
     margin-bottom:30px;
-    margin-top:-30px;
+    margin-left:25%;
     background-color:#99ccff;
 }
 
@@ -281,7 +275,17 @@ nav li:hover {
     margin-bottom: 20px;
 }
 
-/*---------- Projects ----------*/
+.post-detail-content img {
+    display:block;
+    margin: 20px auto;
+    max-width:100%;
+}
+
+/*---------- Portfolio ----------*/
+
+#portfolio-description {
+    padding-right:40px;
+}
 
 #project-list {
     display: inline-block;
@@ -355,29 +359,28 @@ nav li:hover {
     padding-right:15px;
 }
 
-/*---------- About Me ----------*/
+/*---------- About ----------*/
 
-#about-me {
+#about {
     display: inline-block;
     text-align: left;
     width:70%;
 }
 
-#about-me-card {
+#about-card {
     margin-right:10%;
     text-align: left;
 }
 
 
-#about-me-card img {
+#about-card img {
     border-radius:5px;
     margin-right:20px;
     float:left;
 }
 
-#about-me-card p {
+#about-card p {
    text-align: left;
-  
 }
 
 /*---------- Contact ----------*/
@@ -410,6 +413,19 @@ nav li:hover {
     resize:none;
 }
 
+/*---------- Popular Posts ----------*/
+
+#popular-posts {
+    text-align: left;
+    display: inline-block;
+}
+
+#popular-title {
+    font-weight: bold;
+    padding: 5px 0 5px 20px;
+    border-radius:5px;
+}
+
 /*---------- Sidebar ----------*/
 
 #sidebar {
@@ -425,8 +441,13 @@ nav li:hover {
     background-color:#99ccff;
 }
 
+#sidebar-bottom-ad {
+    height:300px;
+    margin: 30px 30px 30px 30px;
+    background-color:#99ccff;
+}
+
 .sidebar-banner {
-    
     background-color: #a6d477;
     color:white;
     font-weight: bold;
@@ -527,6 +548,11 @@ footer {
         cursor:pointer;
     }
 
+    #overlay a:hover{
+        color: black;
+        font-weight: normal;
+      }
+
     /*---------- Blog ----------*/
     
     #blog-posts {
@@ -552,6 +578,12 @@ footer {
         padding-right:20px;
     }
 
+    .blog-list-ad {
+        width:80%;
+        margin:auto;
+        margin-bottom:50px;
+    }
+
     /*---------- Post Detail ----------*/
 
     #post-detail {
@@ -567,8 +599,12 @@ footer {
         padding: 0 10px 0 10px;
     }
 
-    /*--------- Projects ----------*/
+    /*--------- Portfolio ----------*/
     
+    #portfolio-description {
+        padding: 0 20px 0 20px;
+    }
+
     #project-list {
         width:95%;
     }
@@ -589,14 +625,14 @@ footer {
         font-size:1.5em;
     }
 
-    /*---------- About Me ----------*/
+    /*---------- About ----------*/
 
-    #about-me {
+    #about {
         width:95%;
         
     }
 
-    #about-me-card {
+    #about-card {
         margin: 0 20px 0 20px;
     }
 
@@ -623,7 +659,6 @@ footer {
         width:90%;
         margin-left:5%;
         margin-right:5%;
-    
     }
 
     /*---------- Footer ----------*/
