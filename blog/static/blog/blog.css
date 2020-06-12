@@ -281,6 +281,12 @@ nav li:hover {
     margin-bottom: 20px;
 }
 
+.post-detail-content img {
+    display:block;
+    margin: 20px auto;
+    max-width:100%;
+}
+
 /*---------- Portfolio ----------*/
 
 #project-list {

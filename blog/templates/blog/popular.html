@@ -2,8 +2,8 @@
     <h3 id="popular-title">Popular Posts</h3>
         {% for post in popular_posts %}
             <div class="post-card">
-                {% if post.post_image %}
-                <img src="/media/{{ post.post_image.image.name }}">
+                {% if post.post_icon %}
+                <img src="/media/{{ post.post_icon.image.name }}">
                 {% else %}
                 <img>
                 {% endif %}

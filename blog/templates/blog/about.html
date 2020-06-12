@@ -5,7 +5,11 @@
     <div id="about">
         <div class="row">
             <div id="about-card">
-                <img id="user-image" src="{% static 'blog/me.png' %}">
+                {% if photo %}
+                    <img id="user-image" src="/media/{{photo.image.name}}">
+                {% else %}
+                    <img id="user-image" src="{% static 'blog/user.jpg'%}">
+                {% endif %}
                 {{ content.content | safe }}
             </div>
         </div>

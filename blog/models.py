@@ -25,11 +25,16 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     tags = TaggableManager()
-    post_image = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, default='')
+    post_icon = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, default='')
     popular = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
+
+
+class PostImage(models.Model):
+    post = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="posts/")
 
 class Project(models.Model):
     title = models.CharField(max_length=100, unique=True)
