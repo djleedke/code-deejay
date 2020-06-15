@@ -265,6 +265,19 @@ nav li:hover {
     width:70%;
 }
 
+#post-detail a {
+    text-decoration: none;
+    color:#73ae37;
+    font-weight: bold;
+    padding: 0 2px 0 2px;
+}
+
+#post-detail a:hover {
+    background-color: #73ae37;
+    color: white;
+    padding: 0 2px 0 2px;
+}
+
 .post-detail-card {
     background-color:white;
     border-radius:5px;
@@ -290,6 +303,8 @@ nav li:hover {
     margin: 20px auto;
     max-width:100%;
 }
+
+
 
 /*---------- Portfolio ----------*/
 
