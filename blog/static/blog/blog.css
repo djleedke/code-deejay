@@ -175,20 +175,22 @@ nav li:hover {
     display:inline-block;
 }
 
+.post-card a {
+    color:black;
+}
+
 .post-card img {
-    float:left;
-    margin-right:20px;
-    min-height: 200px;
-    height:100%;
-    object-fit: scale-down;
     border-radius: 5px;
     width:15%;
+    float:left;
+    margin-top:20px;
+    margin-left:20px;
 }
 
 .post-preview {
-    margin-left:20px;
-    
-
+    display: block;
+    float:left;
+    width:80%
 }
 
 .post-title {
@@ -203,7 +205,7 @@ nav li:hover {
     padding: 0 40px 0px 40px;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
-    text-overflow: hidden;
+    display: inline-block;
 }
 
 .line-clamp {
@@ -263,6 +265,19 @@ nav li:hover {
     width:70%;
 }
 
+#post-detail a {
+    text-decoration: none;
+    color:#73ae37;
+    font-weight: bold;
+    padding: 0 2px 0 2px;
+}
+
+#post-detail a:hover {
+    background-color: #73ae37;
+    color: white;
+    padding: 0 2px 0 2px;
+}
+
 .post-detail-card {
     background-color:white;
     border-radius:5px;
@@ -288,6 +303,8 @@ nav li:hover {
     margin: 20px auto;
     max-width:100%;
 }
+
+
 
 /*---------- Portfolio ----------*/
 
@@ -569,12 +586,17 @@ footer {
     
     .post-card {
         width:95%;
+        margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 50px;
     }
 
     .post-card img {
         display:none;
+    }
+
+    .post-preview {
+        width:100%;
     }
 
     .post-title, .post-description {
@@ -591,6 +613,8 @@ footer {
         margin:auto;
         margin-bottom:50px;
     }
+
+
 
     /*---------- Post Detail ----------*/
 

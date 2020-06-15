@@ -7,19 +7,19 @@
         {% for post in posts %}
             {% if post.status == 1 %}
                 <div class="post-card">
-                    {% if post.post_icon %}
-                    <img src="/media/{{ post.post_icon.image.name }}">
-                    {% else %}
-                    <img>
-                    {% endif %}
-                    <div class="post-preview" >
-                        <a href="/{{post.slug}}">
+                    <a href="/{{post.slug}}">
+                        {% if post.post_icon %}
+                        <img src="/media/{{ post.post_icon.image.name }}">
+                        {% else %}
+                        <img>
+                        {% endif %}
+                        <div class="post-preview">
                             <h1 class="post-title">{{post.title}}</h1>
                             <div class="post-description">
-                                {{post.description | safe}}  
+                                {{post.description | safe}} 
                             </div>
-                        </a>
-                    </div>
+                        </div> 
+                    </a> 
                 </div>
                 {% if forloop.first %}
                     <div class="blog-list-ad"></div>
