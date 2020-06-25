@@ -272,6 +272,11 @@ nav li:hover {
     padding: 0 2px 0 2px;
 }
 
+#post-detail p {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
 #post-detail a:hover {
     background-color: #73ae37;
     color: white;
