@@ -339,7 +339,7 @@ nav li:hover {
 
 .project-popup {
     position:absolute;
-    bottom:0;
+    bottom:8px;
     height:0px;
     visibility:hidden;
     width:100%;
