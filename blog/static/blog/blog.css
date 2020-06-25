@@ -164,6 +164,7 @@ nav li:hover {
     text-align: left;
     width:70%;
     display: inline-block;
+    margin-bottom:50px;
 }
 
 .post-card{
@@ -263,6 +264,7 @@ nav li:hover {
     display: inline-block;
     text-align: left;
     width:70%;
+    margin-bottom:50px;
 }
 
 #post-detail a {
@@ -307,6 +309,10 @@ nav li:hover {
     display:block;
     margin: 20px auto;
     max-width:100%;
+}
+
+.file-name {
+    font-style: italic;
 }
 
 
