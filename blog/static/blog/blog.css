@@ -263,6 +263,7 @@ nav li:hover {
     display: inline-block;
     text-align: left;
     width:70%;
+    margin-bottom:50px;
 }
 
 #post-detail a {
@@ -270,6 +271,11 @@ nav li:hover {
     color:#73ae37;
     font-weight: bold;
     padding: 0 2px 0 2px;
+}
+
+#post-detail p {
+    margin-top:15px;
+    margin-bottom:15px;
 }
 
 #post-detail a:hover {
@@ -302,6 +308,10 @@ nav li:hover {
     display:block;
     margin: 20px auto;
     max-width:100%;
+}
+
+.file-name {
+    font-style: italic;
 }
 
 
@@ -620,7 +630,7 @@ footer {
 
     #post-detail {
         width:100%;
-        margin: 0 30px 0 30px;
+        margin: 0 30px 30px 30px;
     }
 
     .post-detail-card {
@@ -691,6 +701,7 @@ footer {
         width:90%;
         margin-left:5%;
         margin-right:5%;
+        margin-bottom:30px;
     }
 
     /*---------- Footer ----------*/

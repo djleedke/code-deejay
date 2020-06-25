@@ -22,14 +22,14 @@
                     </a> 
                 </div>
                 {% if forloop.first %}
-                    <div class="blog-list-ad"></div>
+                    <!--<div class="blog-list-ad"></div>-->
                 {% endif %}
             {% endif %}
         {% endfor %}
             {% if posts.count >= 5 %}
-                <div class="blog-list-ad"></div>
+                <!--<div class="blog-list-ad"></div>-->
             {% endif %}
-        {% include "blog/popular.html" %}
+        <!--{% include "blog/popular.html" %}-->
     </div>
     <!-- Sidebar -->
     {% include "blog/sidebar.html" %}
