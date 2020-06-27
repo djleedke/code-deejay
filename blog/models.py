@@ -16,21 +16,21 @@ class Image(models.Model):
         return self.title
 
 class Post(models.Model):
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now= True)
+
+    author = models.ForeignKey(User, on_delete= models.CASCADE)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete= models.CASCADE)
-    updated_on = models.DateTimeField(auto_now= True)
-    description = models.TextField(default='')
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     tags = TaggableManager()
     post_icon = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, default='')
+    description = models.TextField(default='')
+    content = models.TextField()
     popular = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
-
 
 class PostImage(models.Model):
     post = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
