@@ -2,8 +2,15 @@ from django.contrib import admin
 from .models import Post, PostImage, Project, Content, Image
 
 
+
+class PostImageInline(admin.TabularInline):
+    extra = 1
+    model = PostImage
+    fields = ['image']
+
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'status', 'created_on')
+    list_display = ('title', 'status', 'created_on','popular',)
+    inlines = [PostImageInline]
 
 class PostImageAdmin(admin.ModelAdmin):
     list_display = ('post', 'image')
@@ -16,6 +23,7 @@ class ContentAdmin(admin.ModelAdmin):
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('title', 'image')
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(PostImage, PostImageAdmin)
