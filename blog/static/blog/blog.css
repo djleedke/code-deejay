@@ -301,7 +301,7 @@ nav li:hover {
 .post-detail-info {
     font-style: italic;
     font-size: .9em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .post-detail-content img {
@@ -637,9 +637,10 @@ footer {
         width:95%;
     }
     
-    .post-detail-title, .post-detail-info, .post-detail-content {
+    .post-detail-title, .post-detail-info, .post-detail-content, .twitter-share-button {
         padding: 0 10px 0 10px;
     }
+
 
     /*--------- Portfolio ----------*/
     
