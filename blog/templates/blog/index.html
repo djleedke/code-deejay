@@ -1,7 +1,11 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block title %}
+{% if tag %}
+<title>CodeDeejay - {{ tag }}</title>
+{% else %}
 <title>CodeDeejay - Blog</title>
+{% endif %}
 {% endblock %}
 {% block content %}
 <div id="content" class="container">
