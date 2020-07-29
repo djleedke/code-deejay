@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
 from .models import Post, Project, Content, Image
+from taggit.models import Tag
 from .config import *
 from .forms import ContactForm
 
@@ -95,9 +96,11 @@ def post_detail(request, slug):
 def tag_detail(request, slug):
 
     posts = Post.objects.filter(tags__slug__in=[slug])
+    tag = Tag.objects.get(slug=slug)
 
     context = {
       'posts':posts,
+      'tag': tag.name
     }
 
     return render(request, 'blog/index.html', context)
