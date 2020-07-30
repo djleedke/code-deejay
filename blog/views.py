@@ -31,7 +31,6 @@ def about(request):
 
     return render(request, 'blog/about.html', context)
 
-
 #---------- Contact Form ----------
 #Sends contact form information to email address
 def contact(request):
@@ -105,8 +104,6 @@ def tag_detail(request, slug):
 
     return render(request, 'blog/index.html', context)
 
-
-
 #---------- AJAX ----------
 
 def get_post_content(request):
@@ -122,11 +119,13 @@ def get_post_content(request):
 
 def update_post_content(request):
 
-    post_id = request.GET.get('post-id', None)
-    content = request.GET.get('content', None)
+    if(request.method == 'POST'):
+        post_id = request.POST.get('post-id', None)
+        content = request.POST.get('content', None)
 
-    post = Post.objects.get(id=post_id)
-    post.content = content
-    post.save()
-    
-    return HttpResponse(200)
+        post = Post.objects.get(id=post_id)
+        post.content = content
+        post.save()
+        return HttpResponse(200)
+    else:
+        return HttpResponse(404)
