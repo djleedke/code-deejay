@@ -36,7 +36,7 @@ body {
 
 /*---------- Buttons ---------- */
 
-input[type=submit] {
+button, input[type=submit] {
     background-color: #99ce64;
     color:white;
     border-color:transparent;
@@ -46,7 +46,7 @@ input[type=submit] {
     border:none;
 }
 
-input[type=submit]:hover {
+button:hover, input[type=submit]:hover {
     color:white;
     background-color:#b3da8b;
 }
@@ -171,6 +171,29 @@ nav li:hover {
     right: 35px;
     }
   }
+
+/*---------- Admin ----------*/
+
+.admin-bar {
+    position:fixed;
+    bottom:0;
+    margin:0 auto;
+    text-align: right;
+    margin-left:55%;
+}
+
+.admin-bar button {
+    padding: 0 10px;
+}
+
+.editing {
+    white-space:pre-wrap;
+    font-size:.9em;
+}
+
+.editing .post-detail-content {
+    padding:10px 10px;
+}
 
 /*---------- Blog ----------*/
 
@@ -343,7 +366,7 @@ nav li:hover {
     text-align: center;
     font-size:1.25em;
     font-family: 'Karla', sans-serif;
-    padding-bottom:10px;
+    padding-bottom:5px;
 }
 
 .project-card img {
@@ -359,6 +382,8 @@ nav li:hover {
     overflow:hidden;
     opacity:.1;
     background-color: rgb(0,0,0,0);
+    padding-right:2px;
+    padding-left:2px;
 
 }
 .project-card:hover .project-popup{

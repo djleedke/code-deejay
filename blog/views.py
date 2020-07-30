@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.core.mail import send_mail
 from .models import Post, Project, Content, Image
 from taggit.models import Tag
@@ -107,5 +107,26 @@ def tag_detail(request, slug):
 
 
 
+#---------- AJAX ----------
 
+def get_post_content(request):
 
+    post_id = request.GET.get('post-id', None)
+    post = Post.objects.get(id=post_id)
+
+    post = {
+        'content': post.content
+    }
+
+    return JsonResponse(post)
+
+def update_post_content(request):
+
+    post_id = request.GET.get('post-id', None)
+    content = request.GET.get('content', None)
+
+    post = Post.objects.get(id=post_id)
+    post.content = content
+    post.save()
+    
+    return HttpResponse(200)
