@@ -5,19 +5,17 @@
 {% block content %}
 <div id="content" class="container">
     <!-- Post Detail -->
-    <div class="row">
-        <div id="post-detail">
-            <div class="post-detail-card">
-                <h1 class="post-detail-title">{{post.title}}</h1>
-                <div class="post-detail-info">By {{post.author.first_name}} {{post.author.last_name}} on {{post.created_on.date}}</div>
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <div class="post-detail-content">
-                    {{post.content | safe}}  
-                </div>
+    <div class="main">
+        <div class="post-detail-card">
+            <h1 class="post-detail-title">{{post.title}}</h1>
+            <div class="post-detail-info">By {{post.author.first_name}} {{post.author.last_name}} on {{post.created_on.date}}</div>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="post-detail-content">
+                {{post.content | safe}}  
             </div>
         </div>
-        <!-- Sidebar -->
-        {% include "blog/sidebar.html" %}
     </div>
+    <!-- Sidebar -->
+    {% include "blog/sidebar.html" %}
 </div>
 {% endblock %}

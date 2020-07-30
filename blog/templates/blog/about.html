@@ -5,20 +5,18 @@
 {% endblock %}
 {% block content %}
 <div id="content" class="container">
-    <div id="about">
-        <div class="row">
-            <div id="about-card">
-                {% if photo %}
-                    <img id="user-image" src="/media/{{photo.image.name}}">
-                {% else %}
-                    <img id="user-image" src="{% static 'blog/user.jpg'%}">
-                {% endif %}
-                {% if content %}
-                    {{ content.content | safe }}
-                {% else %}
-                    <p>Portfolio content here.</p>
-                {% endif %}
-            </div>
+    <div class="main">
+        <div id="about-card">
+            {% if photo %}
+                <img id="user-image" src="/media/{{photo.image.name}}">
+            {% else %}
+                <img id="user-image" src="{% static 'blog/user.jpg'%}">
+            {% endif %}
+            {% if content %}
+                {{ content.content | safe }}
+            {% else %}
+                <p>Portfolio content here.</p>
+            {% endif %}
         </div>
     </div>
     <!-- Sidebar -->

@@ -27,14 +27,28 @@ body {
     max-width: 1280px;
 }
 
+.main {
+    display: inline-block;
+    text-align: left;
+    width:70%;
+    margin-left:2%;
+}
 
 /*---------- Buttons ---------- */
 
 input[type=submit] {
-    background-color:  #99ce64;
+    background-color: #99ce64;
     color:white;
     border-color:transparent;
-    font-family: 'Karla', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size:.8em;
+    text-transform:none;
+    border:none;
+}
+
+input[type=submit]:hover {
+    color:white;
+    background-color:#b3da8b;
 }
 
 /* ---------- Navbar ---------- */
@@ -99,7 +113,6 @@ nav li:hover {
     font-weight: bold;
 }
 
-
 /*---------- Navbar Overlay ---------- */
 
 #overlay-toggle {
@@ -159,15 +172,7 @@ nav li:hover {
     }
   }
 
-
-
 /*---------- Blog ----------*/
-
-#blog-posts{
-    text-align: left;
-    width:70%;
-    display: inline-block;
-}
 
 .post-card{
     background-color:white;
@@ -262,31 +267,6 @@ nav li:hover {
 
 /*---------- Post Detail ----------*/
 
-#post-detail {
-    display: inline-block;
-    text-align: left;
-    width:70%;
-    margin-bottom:50px;
-}
-
-#post-detail a {
-    text-decoration: none;
-    color:#73ae37;
-    font-weight: bold;
-    padding: 0 2px 0 2px;
-}
-
-#post-detail p {
-    margin-top:15px;
-    margin-bottom:15px;
-}
-
-#post-detail a:hover {
-    background-color: #73ae37;
-    color: white;
-    padding: 0 2px 0 2px;
-}
-
 .post-detail-card {
     background-color:white;
     border-radius:5px;
@@ -294,6 +274,24 @@ nav li:hover {
     margin-bottom: 20px;
     margin-right:10%;
     text-align: left;
+}
+
+.post-detail-card a {
+    text-decoration: none;
+    color:#73ae37;
+    font-weight: bold;
+    padding: 0 2px 0 2px;
+}
+
+.post-detail-card p {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.post-detail-card a:hover {
+    background-color: #73ae37;
+    color: white;
+    padding: 0 2px 0 2px;
 }
 
 .post-detail-title {
@@ -317,8 +315,6 @@ nav li:hover {
     font-style: italic;
 }
 
-
-
 /*---------- Portfolio ----------*/
 
 #portfolio-description {
@@ -329,6 +325,7 @@ nav li:hover {
     display: inline-block;
     text-align: left;
     width:70%;
+    margin-left:2%;
 }
 
 .project-card {
@@ -337,6 +334,9 @@ nav li:hover {
     margin-bottom:40px;
     padding:0px;
     position:relative;
+    display:inline-block;
+    width:20%;
+    margin-right:4%;
 }
 
 .project-card-title {
@@ -399,12 +399,6 @@ nav li:hover {
 
 /*---------- About ----------*/
 
-#about {
-    display: inline-block;
-    text-align: left;
-    width:70%;
-}
-
 #about-card {
     margin-right:10%;
     text-align: left;
@@ -422,12 +416,6 @@ nav li:hover {
 }
 
 /*---------- Contact ----------*/
-
-#contact-me {
-    display: inline-block;
-    text-align: left;
-    width:70%;
-}
 
 #contact-card {
     background-color:white;
@@ -559,8 +547,33 @@ footer {
 }
 
 /*---------- Media Queries ----------*/
-@media only screen and (max-width: 750px){
+
+@media only screen and (max-width: 1000px){
+
+    .post-card img {
+        display:none;
+    }
+
+    .post-preview {
+        width:100%;
+    }
+
+    .project-card {
+        margin-left: 20%;
+        margin-right:20%;
+        display:block;
+        width:60%;
+    }
+}
+
+@media only screen and (max-width: 800px){
     
+    /*---------- Main ----------*/
+
+    .main {
+        width:95%;
+    }
+
     /*---------- Navbar ----------*/
     .main-header{
         display: flex;
@@ -593,23 +606,11 @@ footer {
 
     /*---------- Blog ----------*/
     
-    #blog-posts {
-        width:100%;
-    }
-    
     .post-card {
         width:95%;
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 50px;
-    }
-
-    .post-card img {
-        display:none;
-    }
-
-    .post-preview {
-        width:100%;
     }
 
     .post-title, .post-description {
@@ -627,8 +628,6 @@ footer {
         margin-bottom:50px;
     }
 
-
-
     /*---------- Post Detail ----------*/
 
     #post-detail {
@@ -637,13 +636,12 @@ footer {
     }
 
     .post-detail-card {
-        width:95%;
+        width:100%;
     }
     
     .post-detail-title, .post-detail-info, .post-detail-content, .twitter-share-button {
         padding: 0 10px 0 10px;
     }
-
 
     /*--------- Portfolio ----------*/
     
@@ -652,12 +650,7 @@ footer {
     }
 
     #project-list {
-        width:95%;
-    }
-
-    .project-card {
-        padding-left: 10%;
-        padding-right:10%;
+        width:100%;
     }
 
     .project-card-title {
@@ -665,33 +658,24 @@ footer {
     }
 
     .project-popup {
-        padding-top:5px;
+        padding-top:3px;
     }
 
     .project-card:hover .project-popup{
-        height: 40px;
+        height: 32px;
     }
 
     .popup-link-left, .popup-link-right {
-        font-size:1.5em;
+        font-size:1em;
     }
 
     /*---------- About ----------*/
-
-    #about {
-        width:95%;
-        
-    }
 
     #about-card {
         margin: 0 20px 0 20px;
     }
 
     /*---------- Contact ----------*/
-
-    #contact-me {
-        width:95%;
-    }
 
     #contact-form {
         padding-left:20px;
@@ -702,7 +686,6 @@ footer {
     #name, #email {
         width:100%;
     }
-
 
     /*---------- Sidebar ---------*/
     #sidebar {
@@ -718,6 +701,7 @@ footer {
         margin-left:5%;
     }
 }
+
 
 @media (min-width: 400px){
     .container {
