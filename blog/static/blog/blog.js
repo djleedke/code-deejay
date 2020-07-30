@@ -21,6 +21,8 @@ var editMode = false;
 //Allows us to edit posts from their detail page rather than the admin site
 $('#edit-post-detail').on('click', function(){
 
+    var token = Cookies.get('csrftoken');
+
     if(editMode === false){
         $(this).text('Save');
         $('.post-detail-content').attr('contenteditable', 'true');
@@ -42,8 +44,11 @@ $('#edit-post-detail').on('click', function(){
     } else {
         $(this).text('Edit');
         //AJAX to save new raw post content and then return it for the page
+        console.log(token);
         $.ajax({
+            headers: { 'X-CSRFToken' : token},
             url: '/ajax/update-post-content',
+            type: 'post',
             data: {
                 'post-id': $('.post-detail-content').data('post-id'),
                 'content': $('.post-detail-content').text()

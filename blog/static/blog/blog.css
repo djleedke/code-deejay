@@ -177,9 +177,7 @@ nav li:hover {
 .admin-bar {
     position:fixed;
     bottom:0;
-    margin:0 auto;
-    text-align: right;
-    margin-left:55%;
+    right:5%;
 }
 
 .admin-bar button {
