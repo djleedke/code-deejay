@@ -82,6 +82,7 @@ nav li {
 
 .active-overlay {
     font-weight: bold;
+    color:#99ce64 !important;
 }
 
 nav a {
@@ -123,20 +124,22 @@ nav li:hover {
     width: 100%;
     text-align: left;
     margin-top:45px;
+    background-color:#46606d;
+ 
   }
   
   #overlay a {
     padding: 10px 0 10px 20px;
     text-decoration: none;
     font-size: 1.5em;
-    color: black;
     display: block;
     transition: height 0.3s;
     min-width:200px;
+    color:white;
   }
 
   #overlay a:hover, #overlay a:focus {
-    color: #36454F;
+    color: #b1c4cd !important;
     font-weight: bold;
   }
   
@@ -556,7 +559,7 @@ footer {
 }
 
 /*---------- Media Queries ----------*/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 750px){
     
     /*---------- Navbar ----------*/
     .main-header{
@@ -650,6 +653,11 @@ footer {
 
     #project-list {
         width:95%;
+    }
+
+    .project-card {
+        padding-left: 10%;
+        padding-right:10%;
     }
 
     .project-card-title {
