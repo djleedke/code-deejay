@@ -5,28 +5,23 @@
 {% block content %}
 <div id="content" class="container">
     <!-- Projects -->
-    <div id="project-list">
+    <div class="main">
         {% if content %}
             <div id="portfolio-description">{{ content.content | safe }}</div>
         {% else %}
             <div id="portfolio-description"><p>Portfolio content here.</p>></div>
         {% endif %}
-        <div class="row">
+
         {% for project in projects %}
-            <div class="three columns project-card">
-                <div class="project-card-title">{{ project.title }}</div>
-                {% if project.image %}<img src="{{ project.image.url }}">{% endif %}
-                <div class="project-popup">
-                    <a href="{{ project.project_url }}" target="_blank" class="popup-link-left">Site</a>
-                    <a href="{{ project.github_url }}" target="_blank" class="popup-link-right">Github</a>
-                </div>
+        <div class="project-card">
+            <div class="project-card-title">{{ project.title }}</div>
+            {% if project.image %}<img src="{{ project.image.url }}">{% endif %}
+            <div class="project-popup">
+                <a href="{{ project.project_url }}" target="_blank" class="popup-link-left">Site</a>
+                <a href="{{ project.github_url }}" target="_blank" class="popup-link-right">Github</a>
             </div>
-            {% if forloop.counter|divisibleby:4 %}
         </div>
-        <div class="row">
-            {% endif %}
         {% endfor %}
-        </div>
     </div>
     <!-- Sidebar -->
     {% include "blog/sidebar.html" %}
