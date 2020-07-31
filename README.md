@@ -99,13 +99,13 @@ python manage.py runserver
 
 Navigate to http://127.0.0.1:8000/admin/ and login using the credentials you just made.  From here click on "Contents" and then add 3 content objects with the titles "About", "Contact", and "Portfolio".  Case is important here.  Your contents page should look like this:
 
-![image](https://user-images.githubusercontent.com/33850990/89079274-b0c61180-d34b-11ea-95ca-0a7c22467456.png)
+![image](https://user-images.githubusercontent.com/33850990/89080438-7447e500-d34e-11ea-8339-d5d564e8d6b6.png)
 
 Feel free to edit the content to whatever you would like but the title needs to stay the same for the pages to work.
 
 The final step is to head over to the "Images" page and add any image with the title of "Me" this will be the image that appears on the About page of the site:
 
-![image](https://user-images.githubusercontent.com/33850990/89079461-292cd280-d34c-11ea-8bfa-0ddca59325b6.png)
+![image](https://user-images.githubusercontent.com/33850990/89080462-84f85b00-d34e-11ea-870a-29e141a8361b.png)
 
 At this point the site should run normally!  Posts & projects can be added via the Django admin site to start filling it with content.  Again, this process can definitely still be streamlined a bit but for now this is how it works.
 
