@@ -31,7 +31,85 @@ few local changes that are present in the deployment environment.  It's a work i
 * It's responsive!
   
 ## Setup
-Placeholder for local setup guide.
+
+If you'd like to get the project running locally start by setting up .git in a new folder:
+```
+git init
+```
+
+Pull the repo into the folder:
+```
+git pull https://github.com/djleedke/code-deejay-blog.git
+```
+
+Install virtualenv if you don't have it already and set up the environment (in the root folder still): 
+```
+pip install virtualenv
+```
+```
+python -m virtualenv venv
+```
+
+Activate the virtual environment:
+```
+venv\scripts\activate
+```
+
+Now install the requirements.txt packages:
+```
+pip install -r requirements.txt
+```
+
+Now the fun starts, there are a few things that need to be setup prior to getting the server up and running.  These are related to getting the contact page's email address setup.  Everything is configured to utilize a [Gmail](https://mail.google.com/) account so if you want to use something else you will need to tweak a few other things not mentioned here.  
+
+First we need to create a config.py file in the ```\blog``` folder.  Place the following in it:
+```
+EMAIL = 'email@gmail.com'
+```
+
+Once this is done go to the ```\code_deejay``` folder and create a ```local_settings.py``` file with the following:
+```
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'PASSWORD HERE'
+```
+
+Next, in ```\code_deejay\settings.py``` you will need to ensure that local host has been added to the ```ALLOWED_HOSTS``` list:
+```
+ALLOWED_HOSTS = [
+    '127.0.0.1'
+]
+```
+
+Now to initialize the database we will need to perform the first migration:
+```
+python manage.py migrate
+```
+
+At this point if you head to 127.0.0.1:8000 in your browser the blog page should be working now.  You will find that the other pages are not working yet.  We need to add a few entries into the database that the pages are looking for. (I know this can be a cleaner process and it will be fixed eventually):
+
+Create your superuser account:
+```
+python manage.py createsuperuser
+```
+
+Now we need to get the server up and running:
+```
+python manage.py runserver
+```
+
+Navigate to http://127.0.0.1:8000/admin/ and login using the credentials you just made.  From here click on "Contents" and then add 3 content objects with the titles "About", "Contact", and "Portfolio".  Case is important here.  Your contents page should look like this:
+
+![image](https://user-images.githubusercontent.com/33850990/89079274-b0c61180-d34b-11ea-95ca-0a7c22467456.png)
+
+Feel free to edit the content to whatever you would like but the title needs to stay the same for the pages to work.
+
+The final step is to head over to the "Images" page and add any image with the title of "Me" this will be the image that appears on the About page of the site:
+
+![image](https://user-images.githubusercontent.com/33850990/89079461-292cd280-d34c-11ea-8bfa-0ddca59325b6.png)
+
+At this point the site should run normally!  Posts & projects can be added via the Django admin site to start filling it with content.  Again, this process can definitely still be streamlined a bit but for now this is how it works.
+
+Let me know if you have any questions. Enjoy!
 
 ## Built With
 
