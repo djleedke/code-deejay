@@ -3,9 +3,11 @@ Code-Deejay.com is my personal blog focused on helping and informing coders of a
 to each project (as well as being a part of the portfolio itself). Feel free to check it out at https://www.code-deejay.com!  This is the same repo that is used for the production version of the blog with the exception of a 
 few local changes that are present in the deployment environment.  It's a work in progress but it in it's current state it is very usable as a basic blog engine.
 
+## Contents
+
 - [Features](#features)
 - [Setup](#setup)
-- [Built With](#built-width)
+- [Built With](#built-with)
 
 ## Features
 
