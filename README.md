@@ -9,20 +9,23 @@ few local changes that are present in the deployment environment.  It's a work i
 
 ## Features
 
+### Responsive
+* It's responsive!
+
 ### Blog
-  * Posts can be created via the Django admin site
-  * You can edit the raw HTML of the post from it's page on the site (requires you to be logged in as a superuser)
-  * Tagging system that allows you to tag each post with relative words
-  * The sidebar contains a list of all of the tags available, clicking one will take you to a list of posts with the specified tag
-  * Sidebar also contains a list of popular posts on the site (currently these are manually chosen)
+* Posts can be created via the Django admin site
+* You can edit the raw HTML of the post from it's page on the site (requires you to be logged in as a superuser)
+* Tagging system that allows you to tag each post with relative words
+* The sidebar contains a list of all of the tags available, clicking one will take you to a list of posts with the specified tag
+* Sidebar also contains a list of popular posts on the site (currently these are manually chosen)
   
 ### Portfolio
-  * Projects can be added to the portfolio via the admin site and given a specified order on the page
-  * Each project will give a link to the Github repo and project website when hovered over
+* Projects can be added to the portfolio via the admin site and given a specified order on the page
+* Each project will give a link to the Github repo and project website when hovered over
   
 ### About & Contact
-  * About page and Contact page that can be edited be via the admin site
-  * Contact page allows site visitors to send me an email to my personal Gmail address (without revealing the address)
+* About page and Contact page that can be edited be via the admin site
+* Contact page allows site visitors to send me an email to my personal Gmail address (without revealing the address)
   
 ## Setup
 Placeholder for local setup guide
