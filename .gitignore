@@ -2,6 +2,7 @@
 
 #My files
 config.py
+local_settings.py
 
 #My folders
 media/
