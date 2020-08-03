@@ -6,7 +6,7 @@
 <div id="content" class="container">
     <!-- Post Detail -->
     <div class="main">
-        {% if user.is_superuser %}
+        {% if user.is_staff %}
         <div class="admin-bar">
             <button id="edit-post-detail">Edit</button>
         </div>
