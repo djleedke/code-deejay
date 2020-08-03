@@ -1,3 +1,4 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.core.mail import send_mail
@@ -106,6 +107,7 @@ def tag_detail(request, slug):
 
 #---------- AJAX ----------
 
+@staff_member_required
 def get_post_content(request):
 
     post_id = request.GET.get('post-id', None)
@@ -117,6 +119,7 @@ def get_post_content(request):
 
     return JsonResponse(post)
 
+@staff_member_required
 def update_post_content(request):
 
     if(request.method == 'POST'):
