@@ -1,7 +1,7 @@
 # CodeDeejay
 
-Code-Deejay.com is my personal blog focused on helping and informing coders of all skill levels.  It also serves as a portfolio site to provide a central location with links 
-to each project (as well as being a part of the portfolio itself). Feel free to check it out at https://www.code-deejay.com!  This is the same repo that is used for the production version of the blog with the exception of a 
+Code-Deejay.com is my personal blog focused on helping and informing coders of all skill levels. It is not currently being updated but feel free to take a look around!  It also serves as a portfolio site to provide a central location with links 
+to each project (as well as being a part of the portfolio itself). Feel free to check it out at https://djleedke.pythonanywhere.com/!  This is the same repo that is used for the production version of the blog with the exception of a 
 few local changes that are present in the deployment environment.  It's a work in progress but it in it's current state it is very usable as a basic blog engine.
 
 ## Contents
